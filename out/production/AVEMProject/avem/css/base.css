@@ -1,5 +1,5 @@
 /*
-    borrowed via k33pto (https://github.com/k33ptoo)
+   JavaFX CSS template out-sourced from k33pto (https://github.com/k33ptoo)
 
     Light Mode:
     -fx-primary:  #FFFF;
@@ -311,7 +311,6 @@
     -fx-opacity: 0;
 }
 
-
 #text-area-regular{
     -fx-background-color: -fx-primary, -fx-primarytext;
     -fx-text-fill: -fx-primarytext;
@@ -339,62 +338,6 @@
     -fx-pref-header: 10;
     -fx-opacity: 100;
 }
-
-
-/*
-.text-area {
-    -fx-background-insets: 10 10 10 10;
-    -fx-background-color: -fx-primary;
-    -fx-border-color: -fx-maroon;
-    -fx-border-radius: 10 10 10 10;
-    -fx-prompt-text-fill: -fx-primary;
-    -fx-box-border: -fx-primary;
-        -fx-inner-background: -fx-primary;
-}
-
-.text-area .content{
-    -fx-background-insets: 10 10 10 10;
-    -fx-background-color: -fx-primary;
-    -fx-inner-background: -fx-primary;
-    -fx-box-border: -fx-primary;
-    -fx-prompt-text-fill: -fx-primary;
-    -fx-box-border: -fx-primary;
-    -fx-text-background-color: black;
-
-}
-.text-area .content .text{
-    -fx-font-smoothing-type: GRAY;
-    -fx-background-color: -fx-primary;
-    -fx-border-color: -fx-primary;
-}
-
-
-
-.text-area: focused .content{
-    -fx-background-color: -fx-primary;
-    /*
-        -fx-highlight-fill: -fx-gold;
-        -fx-border-radius: 10 10 10 10;
-        -fx-prompt-text-fill: -fx-primary;
-        -fx-box-border: -fx-primary;
-        -fx-inner-background: -fx-primary;
-        -fx-text-background-color: black;
-
-
-            -fx-background: -fx-maroon;
-            -fx-prompt-text-fill: -fx-primary;
-            -fx-box-border: -fx-primary;
-            -fx-inner-background: -fx-primary;
-            -fx-text-background-color: black;
-    }
-
-
-*/
-
-
-
-
-
 
 .table-view {
     -fx-background-color: -fx-primary;

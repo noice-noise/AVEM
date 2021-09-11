@@ -14,8 +14,6 @@ public class AVEquipment {
     private String currentLocation;
     private boolean isAvailable;
 
-    //TODO (soon) img file path are for future implementation (adding it originally allows flexibility)
-
     public AVEquipment(String name, String type, String serialNumber) {
         this.name = name;
         this.type = type;

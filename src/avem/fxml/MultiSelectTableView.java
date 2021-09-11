@@ -111,28 +111,13 @@ public class MultiSelectTableView<S> extends TableView<S> {
             selectedIndices.clear();
             selectedIndices.addAll(sm.getSelectedIndices());
             avSelectedItems = sm.getSelectedItems();
-//            System.out.println("\n\n" + avSelectedItems);
             update = false;
         });
     }
 
-    public HashSet<Integer> getSelectedHash() {
-//        System.out.println("WOW!" + selectedIndices);
-        return selectedIndices;
-    }
-
     public ObservableList<S> getSelectedHashItems() {
-//        System.out.println("Sel: " + preSelectedItems.size());
-        if (preSelectedItems != null){
-//            System.out.println("PRE: \n" + preSelectedItems);
-//            System.out.println("AV: \n" +avSelectedItems);
-
-//            avSelectedItems.addAll(preSelectedItems);
-        }
         return avSelectedItems;
     }
 
-    public static void overrideUpdate(){
 
-    }
 }

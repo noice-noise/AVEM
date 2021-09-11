@@ -5,9 +5,6 @@ import avem.core.AVAccount;
 import avem.core.AVEquipment;
 import avem.core.AVEquipmentManager;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class AdminTools {
 
     public static void createInitialEquipmentFiles() {

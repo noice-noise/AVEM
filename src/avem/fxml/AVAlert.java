@@ -74,8 +74,6 @@ public class AVAlert {
     public static void showMessage(String title, String message) {
         window = new Stage();
         window.setTitle(title);
-//        HEIGHT = 300.0;
-//        WIDTH = 350.0;
 
         lblHeader = new Label(title);
         lblHeader.setText(title);

@@ -63,11 +63,11 @@ public class AVEMTheme {
 
     private static final List themeLabels =
             Arrays.asList(
-                    "Wildcats (CIT-U)",
-                    "Ponkan (Orange)",
-                    "Webmasters (UC)",
-                    "Warriors (USC)",
-                    "Cobras (SWU-Phinma))");
+                    "Maroon&Gold",
+                    "Ponkan",
+                    "Lemon",
+                    "Lime",
+                    "Lavender");
 
     private static Color DARK_GRAY = Color.web("#414141");
     private static Color THEME_IMAGE_ACCENT_COLOR = DARK_GRAY;

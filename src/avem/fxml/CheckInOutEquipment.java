@@ -235,7 +235,6 @@ public class CheckInOutEquipment implements Initializable {
 
     private static void selectAllPreSelectedShit() {
         System.out.println("selectAllPreSelectedShit invoked... \nselectedEquipment size: " + selectedEquipment.size());
-//        tblEquipmentView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
         ObservableList<AVEquipment> items = tblEquipmentView.getItems();
         HashSet<Integer> keys = new HashSet<>();
 
@@ -281,8 +280,6 @@ public class CheckInOutEquipment implements Initializable {
 
     private static ObservableList<AVEquipment> getEquipmentList() {
         ObservableList<AVEquipment> equipmentObservableList = FXCollections.observableArrayList();
-
-//        ArrayList<AVEquipment> equipmentEntries = equipmentBundle.values();
 
         for (AVEquipment ave :
                 equipmentBundle.values()) {

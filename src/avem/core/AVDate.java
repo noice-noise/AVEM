@@ -17,10 +17,6 @@ public class AVDate {
         this.year = year;
     }
 
-    //  7/2/2020    8 chars
-    //  12/2/2020   9 chars
-    //  12/12/2020  10 chars
-
     /***
      * Allows easy implementation using String when parsing the data from the parent Event Manager.
      * @param simplifiedDateFormat
@@ -60,13 +56,10 @@ public class AVDate {
     }
 
 
-
     private boolean isBetweenEightAndTen(String simplifiedTimeFormat) {
         return simplifiedTimeFormat.length() >= 8 && simplifiedTimeFormat.length() <= 10;
     }
 
-    // 12/2/2013     8 chars
-    // 12/12/2020   10 chars
 
     private boolean hasOneOrTwoCharactersBeforeDelimiter(String simplifiedTimeFormat) {
         String contents = simplifiedTimeFormat;

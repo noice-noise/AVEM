@@ -26,7 +26,6 @@ public class RefreshPageController {
         Stage window = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         scene.setFill(Color.TRANSPARENT);
-//        scene.getStylesheets().removeAll();
         scene.getStylesheets().addAll(AVEMTheme.getStyleSheets());
         window.setScene(scene);
         window.setTitle(VERSION);

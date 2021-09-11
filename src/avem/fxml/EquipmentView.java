@@ -367,19 +367,6 @@ public class EquipmentView {
         window.setScene(scene);
         AVEMWindows.makeMovableScene(window, scene);
         window.showAndWait();
-
-//        if (verifiedAdd) {
-//            System.out.println("VERIFIED EDIT");
-//            avEquipment = new AVEquipment(textFields.get(0).getText(), textFields.get(1).getText(), textFields.get(2).getText());
-//            avEquipment.setBrand(textFields.get(3).getText());
-//            avEquipment.setNotes(txtNotes.getText());
-//            avEquipment.setCurrentLocation(textFields.get(4).getText());
-//            System.out.println(avEquipment.getFormattedString());
-//            return avEquipment;
-//        }
-
-//        System.out.println("Edit equipment failed.");
-////        return null;
     }
 
     public static String getDefectReport() {

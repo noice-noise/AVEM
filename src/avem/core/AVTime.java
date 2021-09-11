@@ -31,11 +31,13 @@ public class AVTime {
      * @param simplifiedTimeFormat
      */
     public AVTime(String simplifiedTimeFormat) {
+
         boolean ok = isValid(simplifiedTimeFormat);
-//        System.out.println("OK: " + ok);
+
         if (ok) {
+
             if (simplifiedTimeFormat.length() == 8) {
-//                System.out.println("Valid Simlified Time Format..");
+
                 int count = 0;
                 char[] timeChars = simplifiedTimeFormat.toCharArray();
                 this.hours = "" + timeChars[count++] +  timeChars[count++];
@@ -43,9 +45,9 @@ public class AVTime {
                 this.minutes = "" + timeChars[count++] +  timeChars[count++];
                 count++;    // to exlude ' '
                 this.timeOfDay = "" + timeChars[count++] +  timeChars[count++];
-//                System.out.println(getData());
+
             } else if (simplifiedTimeFormat.length() == 7) {
-//                System.out.println("Valid Simlified Time Format..");
+
                 int count = 0;
                 char[] timeChars = simplifiedTimeFormat.toCharArray();
                 this.hours = "" + timeChars[count++];
@@ -53,7 +55,7 @@ public class AVTime {
                 this.minutes = "" + timeChars[count++] +  timeChars[count++];
                 count++;    // to exlude ' '
                 this.timeOfDay = "" + timeChars[count++] +  timeChars[count++];
-//                System.out.println(getData());
+
             }
         } else {
             throw new NullPointerException("Time format must be 12-hour hh:mm aa (hour:minutes AM/PM");
@@ -68,7 +70,6 @@ public class AVTime {
     }
 
     private boolean hasOneOrTwoCharactersBeforeSpace(String simplifiedTimeFormat) {
-//        System.out.println("simplifiedDate: " + simplifiedTimeFormat);
         String contents = simplifiedTimeFormat;
         String toParse;
         char[] traversedChars = {};
@@ -79,19 +80,12 @@ public class AVTime {
             traversedChars = toParse.toCharArray();
 
             if (simplifiedTimeFormat.length() == 8 && traversedChars.length > 4) {
-//                System.out.println("[IN1] traversedChars: " + String.copyValueOf(traversedChars));
-                //need to break or else the next parse will be the AM/PM
                 break;
             } else if (simplifiedTimeFormat.length() == 7 && traversedChars.length > 3) {
-//                System.out.println("[IN2] traversedChars: " + String.copyValueOf(traversedChars));
                 break;
             }
         }
 
-//        System.out.println("traversedChars: " + String.copyValueOf(traversedChars));
-
-//        System.out.println("len-3: " + traversedChars[traversedChars.length - 3]);
-//        System.out.println("len-3: " + traversedChars[traversedChars.length - 1]);
         if (traversedChars[traversedChars.length - 3] == ':') {
             return true;
         }
@@ -102,53 +96,41 @@ public class AVTime {
 
     private boolean validTimeOfDayID(String simplifiedTimeFormat) {
 
-//        System.out.println(simplifiedTimeFormat);
         char[] toVerify = simplifiedTimeFormat.toCharArray();
-//        System.out.println("toVerify: " +   String.copyValueOf(toVerify));
+
         int len = toVerify.length;
         char[] lastTwoCharacters = {toVerify[len - 2], toVerify[len - 1]};
-//        System.out.println("\nlastTwoCharacters: " + String.copyValueOf(lastTwoCharacters));
 
         char mustSpace = toVerify[len - 3];
 
         if (( String.copyValueOf(lastTwoCharacters).equals("AM") ||
                 String.copyValueOf(lastTwoCharacters).equals("PM")) &&
                 mustSpace == ' ') {
-//            System.out.println("[VALID] TIME OF DAY");
             return true;
 
         } else {
 
-//            System.out.println("[FALSE] validTimeOfDayID");
-//            System.out.println("\nlastTwoCharacters: " + lastTwoCharacters);
-//            System.out.println("\nmustSpace: " + mustSpace);
             return false;
         }
     }
 
     private boolean hasOneOrTwoCharactersBeforeDelimiter(String simplifiedTimeFormat) {
-//        System.out.println(("hasOneOrTwoCharactersBeforeDelimiter") + simplifiedTimeFormat);
         String contents = simplifiedTimeFormat;
         String toParse;
 
         StringTokenizer st = new StringTokenizer(contents);
         while (st.hasMoreTokens()) {
             toParse = st.nextToken(":");
-//            System.out.println("toParse: " + toParse);
             if (toParse.length() >= 1 && toParse.length() <= 2) {
-//                System.out.println("[OVRR TRUE] hasOneOrTwoCharactersBeforeDelimiter");
                 return true;
             }
         }
-//        System.out.println("[FALSE] hasOneOrTwoCharactersBeforeDelimiter");
         return false;
     }
-            // 1:43
+
     private boolean isBetweenFourToFiveCharacters(String simplifiedTimeFormat) {
-//        System.out.println("[" + (simplifiedTimeFormat.length() < 4 || simplifiedTimeFormat.length() > 5) + "]" + "four-five func");
         return simplifiedTimeFormat.length() < 4 || simplifiedTimeFormat.length() > 5;
     }
-
 
 
     /***

@@ -13,7 +13,7 @@ public class AVEventManager {
     private File eventManagerFile;
 
 
-    // variables for testing purposes (please treat with respect hihi)
+    // variables for testing purposes (please treat with respect)
 
     private boolean isTest;         // this humble variable used to check if the current activity is for Testing
     private boolean sessionDone;    // this another humble variable is used to as signifier to delete all recent library called for testing
