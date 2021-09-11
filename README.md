@@ -2,29 +2,28 @@
 
 
 # AVEM
----
 Audio-Visual Equipment Manager(AVEM) is a stand-alone application developed using Java and JavaFX for our CpE340 - Modern Systems and Design class.
 
 Its purpose is to allow easier, systematic, and portable AV equipment tracking and management for the multimedia and documentation support department at [Cebu Institute of Technology - University](https://cit.edu/) 
 
-![[avem.gif]]
+![AVEM](https://github.com/noice-noise/audio-visual-equipment-manager/blob/main/avem.gif)
 
 # Team
----
 + Comeros, Raul Jr.
 + Quiros, Paul John
 + Seblos, Samantha Jane
-+ Saycon, Renzo
++ Saycon, Renzo Dannielle
 
 
 # Screenshots
----
 
-|![[Screenshot (449).png]]|![[Screenshot (450).png]]|
+
+| ![AVEM](https://github.com/noice-noise/audio-visual-equipment-manager/blob/main/Screenshot%20(449).png) | ![AVEM](https://github.com/noice-noise/audio-visual-equipment-manager/blob/main/Screenshot%20(450).png) |
 |---|---|
-|![[Screenshot (451).png]]|![[Screenshot (452).png]]|
-|![[Screenshot (424).png]] |![[Screenshot (429).png]] |
-|![[Screenshot (427).png]]|![[Screenshot (430).png]]|
+| ![AVEM](https://github.com/noice-noise/audio-visual-equipment-manager/blob/main/Screenshot%20(451).png) | ![AVEM](https://github.com/noice-noise/audio-visual-equipment-manager/blob/main/Screenshot%20(452).png) |
+| ![AVEM](https://github.com/noice-noise/audio-visual-equipment-manager/blob/main/Screenshot%20(424).png) | ![AVEM](https://github.com/noice-noise/audio-visual-equipment-manager/blob/main/Screenshot%20(429).png) |
+| ![AVEM](https://github.com/noice-noise/audio-visual-equipment-manager/blob/main/Screenshot%20(427).png) | ![AVEM](https://github.com/noice-noise/audio-visual-equipment-manager/blob/main/Screenshot%20(430).png) |
+
 
 
 
@@ -37,7 +36,6 @@ Its purpose is to allow easier, systematic, and portable AV equipment tracking a
 
 # Features
 
----
 
 #### Events Calendar
 
