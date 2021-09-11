@@ -8,8 +8,9 @@ Its purpose is to allow easier, systematic, and portable AV equipment tracking a
 # Team
 + [Comeros, Raul Jr.](https://www.linkedin.com/in/comerosrauljr/)
 + Quiros, Paul John
-+ Seblos, Samantha Jane
 + Saycon, Renzo Dannielle
++ Seblos, Samantha Jane
+
 
 
 # Screenshots
@@ -24,7 +25,7 @@ Its purpose is to allow easier, systematic, and portable AV equipment tracking a
 
 
 # Compatibility
----
+
 + Requires Java 16.0 or higher
 + To allow file data creation, run the software as "Administrator"
 
