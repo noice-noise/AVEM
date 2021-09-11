@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="mainAnchorPane" prefHeight="470.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="avem.fxml.AccountsViewController">
+   <children>
+      <AnchorPane layoutX="27.0" layoutY="42.0" prefHeight="407.0" prefWidth="546.0" AnchorPane.bottomAnchor="51.0" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="27.0" AnchorPane.topAnchor="42.0">
+         <children>
+            <BorderPane layoutX="23.0" layoutY="-6.0" prefHeight="413.0" prefWidth="501.0">
+               <top>
+                  <AnchorPane prefHeight="100.0" prefWidth="541.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label alignment="CENTER" layoutX="9.0" layoutY="35.0" prefHeight="35.0" prefWidth="487.0" styleClass="special-label" text="Manage Accounts">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </top>
+               <bottom>
+                  <AnchorPane prefHeight="49.0" prefWidth="501.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox alignment="CENTER" layoutX="96.0" prefHeight="32.0" prefWidth="322.0" spacing="10.0" AnchorPane.bottomAnchor="17.0" AnchorPane.leftAnchor="96.0" AnchorPane.rightAnchor="83.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Button fx:id="btnAdd" mnemonicParsing="false" onAction="#handleButton" prefHeight="35.0" prefWidth="121.0" text="Add" />
+                              <Button fx:id="btnEdit" mnemonicParsing="false" onAction="#handleButton" prefHeight="35.0" prefWidth="121.0" text="Edit" />
+                              <Button fx:id="btnRemove" mnemonicParsing="false" onAction="#handleButton" prefHeight="35.0" prefWidth="121.0" text="Remove" />
+                              <Button fx:id="btnCancel" mnemonicParsing="false" onAction="#handleButton" prefHeight="35.0" prefWidth="121.0" text="Cancel" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+               </bottom>
+               <center>
+                  <AnchorPane prefHeight="197.0" prefWidth="452.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <ListView fx:id="lvAccounts" layoutX="57.0" prefHeight="224.0" prefWidth="388.0" />
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

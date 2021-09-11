@@ -1,0 +1,6 @@
+* {
+    -main-color:  #760024;
+    -main-color-accent: derive(main-color, 50%);
+    -secondary-color: #E0C6CE;
+    -secondary-accent:  derive(secondary-color, 50%);
+}

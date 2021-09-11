@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="avem.fxml.TableViewController">
+   <left>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnCancel" layoutX="74.0" layoutY="115.0" mnemonicParsing="false" onAction="#switchToDashboard" text="Cancel" />
+            <Label fx:id="lblHeader" layoutX="126.0" layoutY="14.0" text="Label" />
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="429.0" prefWidth="446.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="tableView" layoutX="48.0" layoutY="83.0" prefHeight="245.0" prefWidth="351.0">
+              <columns>
+                <TableColumn fx:id="nameColumn" prefWidth="75.0" text="Name" />
+                <TableColumn fx:id="typeColumn" prefWidth="75.0" text="Type" />
+                  <TableColumn fx:id="serialNumberColumn" prefWidth="75.0" text="Serial No." />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

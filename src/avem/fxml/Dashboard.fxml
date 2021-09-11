@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="mainAnchorPane" fx:id="pnlMainAnchorPane" prefHeight="655.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="avem.fxml.DashboardController">
+   <children>
+      <BorderPane id="event-border-pane" prefHeight="640.0" prefWidth="1024.0">
+         <left>
+            <AnchorPane prefHeight="640.0" prefWidth="242.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox alignment="CENTER" layoutX="25.0" layoutY="229.0" prefHeight="284.0" prefWidth="203.0" spacing="10.0" AnchorPane.bottomAnchor="127.0" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="229.0">
+                     <children>
+                        <Button fx:id="btnDashboard" graphicTextGap="20.0" mnemonicParsing="false" onAction="#handleButton" prefHeight="57.0" prefWidth="203.0" styleClass="dash-button" text="Dashboard">
+                           <graphic>
+                              <ImageView fx:id="imgDashboard" fitHeight="28.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/nav/dashboard_layout_96px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btnEquipment" graphicTextGap="20.0" mnemonicParsing="false" onAction="#handleButton" prefHeight="57.0" prefWidth="203.0" styleClass="dash-button" text="Equipment">
+                           <graphic>
+                              <ImageView fx:id="imgEquipment" fitHeight="28.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/nav/bursts_96px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btnAccounts" graphicTextGap="20.0" mnemonicParsing="false" onAction="#handleButton" prefHeight="57.0" prefWidth="203.0" styleClass="dash-button" text="Accounts">
+                           <graphic>
+                              <ImageView fx:id="imgAccounts" fitHeight="28.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/nav/account_96px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btnSettings" graphicTextGap="20.0" mnemonicParsing="false" onAction="#handleButton" prefHeight="57.0" prefWidth="203.0" styleClass="dash-button" text="Settings">
+                           <graphic>
+                              <ImageView fx:id="imgSettings" fitHeight="28.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/nav/settings_96px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <Button fx:id="btnSignOut" alignment="CENTER" graphicTextGap="20.0" layoutX="68.0" layoutY="591.0" mnemonicParsing="false" onAction="#switchToSignOut" prefHeight="40.0" prefWidth="153.0" text="Sign out">
+                     <graphic>
+                        <ImageView fx:id="imgSignOut" fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/buttons/male_user_48px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <AnchorPane layoutX="68.0" layoutY="114.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="70.0" prefWidth="163.0" text="AVEM">
+                           <font>
+                              <Font name="System Bold" size="48.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="9.0" layoutY="55.0" prefHeight="17.0" prefWidth="141.0" text="AV Equipment Manager" />
+                     </children>
+                  </AnchorPane>
+               </children></AnchorPane>
+         </left>
+         <center>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <top>
+                  <AnchorPane fx:id="pnlHeader" prefHeight="119.0" prefWidth="747.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox fillHeight="false" layoutX="527.0" layoutY="14.0" prefHeight="91.0" prefWidth="339.0" spacing="5.0">
+                           <children>
+                              <Button fx:id="btnReserve" contentDisplay="TOP" mnemonicParsing="false" onAction="#switchToReservePane" prefHeight="171.0" prefWidth="110.0" text="Reserve">
+                                 <graphic>
+                                    <ImageView fx:id="imgReserve" fitHeight="33.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../resources/upper-nav/inscription_48px.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="btnCheckout" contentDisplay="TOP" mnemonicParsing="false" onAction="#switchToCheckOut" prefHeight="171.0" prefWidth="110.0" text="Check In/Out">
+                                 <graphic>
+                                    <ImageView fx:id="imgCheckInOut" fitHeight="35.0" fitWidth="36.0">
+                                       <image>
+                                          <Image url="@../resources/upper-nav/cardboard_box_48px.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></Button>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="BASELINE_LEFT" fillHeight="false" layoutX="165.0" prefHeight="91.0" prefWidth="339.0" spacing="5.0" visible="false">
+                           <children>
+                              <Label id="mainHeader" fx:id="lblWindowHeader" prefHeight="81.0" prefWidth="312.0" stylesheets="@../css/base.css" text="Home">
+                                 <font>
+                                    <Font size="48.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </HBox>
+                        <Button fx:id="btnExit" graphicTextGap="0.0" layoutX="939.0" layoutY="54.0" mnemonicParsing="false" onAction="#handleButton" prefHeight="51.0" prefWidth="52.0">
+                           <graphic>
+                              <ImageView fx:id="imgExit" fitHeight="25.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/menu/cancel_48px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </top>
+               <right>
+                  <AnchorPane prefHeight="521.0" prefWidth="292.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label layoutX="28.0" layoutY="30.0" styleClass="special-label" text="Announcements" textFill="#971921">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="29.0" layoutY="258.0" styleClass="special-label" text="Recent Activity" textFill="#971921">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="txtRecentActivity" layoutX="23.0" layoutY="288.0" prefHeight="223.0" prefWidth="200.0" />
+                        <TextArea fx:id="txtAnnouncement" layoutX="22.0" layoutY="61.0" prefHeight="184.0" prefWidth="200.0" />
+                     </children>
+                  </AnchorPane>
+               </right>
+               <center>
+                  <StackPane fx:id="pnlMainStack" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane fx:id="pnlSettings" prefHeight="200.0" prefWidth="200.0" styleClass="dash-pane">
+                           <children>
+                              <Label layoutX="70.0" layoutY="35.0" prefWidth="196.0" text="Settings">
+                                 <font>
+                                    <Font size="52.0" />
+                                 </font>
+                              </Label>
+                              <VBox layoutX="92.0" layoutY="125.0" prefHeight="356.0" prefWidth="302.0" spacing="10.0">
+                                 <children>
+                                    <Button fx:id="btnAppearance" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleButton" prefHeight="55.0" prefWidth="312.0" text="Appearance">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets left="20.0" />
+                                       </padding>
+                                    </Button>
+                                    <Button fx:id="btnResetSystem" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#resetEverything" prefHeight="55.0" prefWidth="355.0" text="Reset AVEM System">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets left="20.0" />
+                                       </padding>
+                                    </Button>
+                                    <Button fx:id="btnInitSystem" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#adminToolsInit" prefHeight="55.0" prefWidth="355.0" text="Initialize AVEM System">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets left="20.0" />
+                                       </padding>
+                                    </Button>
+                                    <Button fx:id="btnFAQs" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleButton" prefHeight="55.0" prefWidth="365.0" text="FAQs">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets left="20.0" />
+                                       </padding>
+                                    </Button>
+                                 </children>
+                              </VBox>
+                              <StackPane layoutX="417.0" layoutY="17.0">
+                                 <children>
+                                    <AnchorPane fx:id="pnlAppearance" prefHeight="546.0" prefWidth="333.0" styleClass="dash-pane">
+                                       <children>
+                                          <GridPane layoutX="14.0" layoutY="108.0" prefHeight="251.0" prefWidth="309.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="10.0" prefWidth="87.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="230.0" minWidth="10.0" prefWidth="222.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Label alignment="CENTER" prefHeight="17.0" prefWidth="112.0" text="Mode:">
+                                                   <GridPane.margin>
+                                                      <Insets right="10.0" />
+                                                   </GridPane.margin>
+                                                </Label>
+                                                <Label alignment="CENTER" prefHeight="17.0" prefWidth="111.0" text="Theme:" GridPane.rowIndex="1">
+                                                   <GridPane.margin>
+                                                      <Insets right="10.0" />
+                                                   </GridPane.margin>
+                                                </Label>
+                                                <ChoiceBox fx:id="cbThemeMode" prefWidth="150.0" GridPane.columnIndex="1" />
+                                                <ChoiceBox fx:id="cbThemeColor" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                <Button fx:id="btnApplyTheme" mnemonicParsing="false" onAction="#handleButton" prefHeight="25.0" prefWidth="88.0" text="Apply" GridPane.rowIndex="2">
+                                                   <GridPane.margin>
+                                                      <Insets left="10.0" right="10.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                                <Button fx:id="btnResetThemeDefaults" mnemonicParsing="false" onAction="#handleButton" prefHeight="25.0" prefWidth="136.0" text="Reset to Defaults" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                   <GridPane.margin>
+                                                      <Insets left="10.0" right="10.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="dash-pane" />
+                                 </children>
+                              </StackPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="pnlAccounts" prefHeight="200.0" prefWidth="200.0" styleClass="dash-pane">
+                           <children>
+                              <VBox layoutX="93.0" layoutY="126.0" prefHeight="364.0" prefWidth="302.0" spacing="10.0">
+                                 <children>
+                                    <Button fx:id="btnEditProfile" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleAccountButtons" prefHeight="55.0" prefWidth="355.0" text="Edit Profile">
+                                       <padding>
+                                          <Insets left="20.0" />
+                                       </padding>
+                                    </Button>
+                                    <Button fx:id="btnManageAccounts" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleAccountButtons" prefHeight="55.0" prefWidth="355.0" text="Manage Account">
+                                       <padding>
+                                          <Insets left="20.0" />
+                                       </padding>
+                                    </Button>
+                                    <Button fx:id="btnUserActivity" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleAccountButtons" prefHeight="55.0" prefWidth="349.0" text="User Activity">
+                                       <padding>
+                                          <Insets left="20.0" />
+                                       </padding>
+                                    </Button>
+                                    <Button fx:id="btnAnnouncements" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleAccountButtons" prefHeight="55.0" prefWidth="365.0" text="Announcements">
+                                       <padding>
+                                          <Insets left="20.0" />
+                                       </padding>
+                                    </Button>
+                                 </children>
+                              </VBox>
+                              <Label layoutX="71.0" layoutY="35.0" prefHeight="75.0" prefWidth="322.0" text="Accounts">
+                                 <font>
+                                    <Font size="52.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <BorderPane fx:id="pnlDashboard">
+                           <center>
+                              <AnchorPane prefHeight="469.0" prefWidth="717.0" styleClass="anchor-pane" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <GridPane fx:id="gpCalendar" alignment="BASELINE_CENTER" hgap="10.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="283.0" prefWidth="759.0" vgap="10.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints maxHeight="84.0" minHeight="0.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="390.0" minHeight="0.0" prefHeight="193.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="19.0" prefWidth="90.0" text="Sunday" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" />
+                                          <Label alignment="CENTER" prefHeight="17.0" prefWidth="107.0" text="Monday" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" />
+                                          <Label alignment="CENTER" prefHeight="17.0" prefWidth="107.0" text="Tuesday" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" />
+                                          <Label alignment="BOTTOM_CENTER" prefHeight="17.0" prefWidth="107.0" text="Saturday" textAlignment="CENTER" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" />
+                                          <Label alignment="CENTER" prefHeight="17.0" prefWidth="107.0" text="Friday" textAlignment="CENTER" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" />
+                                          <Label alignment="CENTER" prefHeight="17.0" prefWidth="107.0" text="Thursday" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" />
+                                          <Label alignment="CENTER" prefHeight="17.0" prefWidth="107.0" text="Wednesday" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" />
+                                          <Label fx:id="lblSunday" alignment="TOP_CENTER" prefHeight="34.0" prefWidth="111.0" text="31" textAlignment="CENTER" GridPane.valignment="TOP">
+                                             <font>
+                                                <Font size="36.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="lblTuesday" alignment="TOP_CENTER" prefHeight="34.0" prefWidth="111.0" text="31" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.valignment="TOP">
+                                             <font>
+                                                <Font size="36.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="lblMonday" alignment="TOP_CENTER" prefHeight="34.0" prefWidth="111.0" text="1" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.valignment="TOP">
+                                             <font>
+                                                <Font size="36.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="lblWednesday" alignment="TOP_CENTER" prefHeight="34.0" prefWidth="111.0" text="9" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.valignment="TOP">
+                                             <font>
+                                                <Font size="36.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="lblFriday" alignment="TOP_CENTER" prefHeight="34.0" prefWidth="111.0" text="1" textAlignment="CENTER" GridPane.columnIndex="5" GridPane.valignment="TOP">
+                                             <font>
+                                                <Font size="36.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="lblSaturday" alignment="CENTER" prefHeight="34.0" prefWidth="111.0" text="31" textAlignment="CENTER" GridPane.columnIndex="6" GridPane.valignment="TOP">
+                                             <font>
+                                                <Font size="36.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="lblThursday" alignment="TOP_CENTER" prefHeight="34.0" prefWidth="111.0" text="31" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.valignment="TOP">
+                                             <font>
+                                                <Font size="36.0" />
+                                             </font>
+                                          </Label>
+                                          <ScrollPane fitToWidth="true" GridPane.rowIndex="1">
+                                             <content>
+                                                <VBox fx:id="sundayVbox" prefHeight="200.0" prefWidth="100.0" />
+                                             </content>
+                                          </ScrollPane>
+                                          <ScrollPane fitToWidth="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                             <content>
+                                                <VBox fx:id="mondayVbox" prefHeight="200.0" prefWidth="100.0" />
+                                             </content>
+                                          </ScrollPane>
+                                          <ScrollPane fitToWidth="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                             <content>
+                                                <VBox fx:id="tuesdayVbox" prefHeight="200.0" prefWidth="100.0" />
+                                             </content>
+                                          </ScrollPane>
+                                          <ScrollPane fitToWidth="true" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                             <content>
+                                                <VBox fx:id="wednesdayVbox" prefHeight="325.0" prefWidth="91.0" />
+                                             </content>
+                                          </ScrollPane>
+                                          <ScrollPane fitToWidth="true" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                                             <content>
+                                                <VBox fx:id="thursdayVbox" prefHeight="200.0" prefWidth="100.0" />
+                                             </content>
+                                          </ScrollPane>
+                                          <ScrollPane fitToWidth="true" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                                             <content>
+                                                <VBox fx:id="fridayVbox" prefHeight="200.0" prefWidth="100.0" />
+                                             </content>
+                                          </ScrollPane>
+                                          <ScrollPane fitToWidth="true" GridPane.columnIndex="6" GridPane.rowIndex="1">
+                                             <content>
+                                                <VBox fx:id="saturdayVbox" prefHeight="200.0" prefWidth="100.0" />
+                                             </content>
+                                          </ScrollPane>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                    </GridPane>
+                                 </children>
+                              </AnchorPane>
+                           </center>
+                           <top>
+                              <AnchorPane prefHeight="67.0" prefWidth="717.0" styleClass="dash-pane" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Button fx:id="btnCalendarPrev" layoutX="34.0" layoutY="19.0" mnemonicParsing="false" onAction="#handleButton" text="&lt;">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Label fx:id="lblMonthYear" layoutX="313.0" layoutY="16.0" styleClass="special-label" text="Month Year">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Button fx:id="btnCalendarNext" layoutX="700.0" layoutY="19.0" mnemonicParsing="false" onAction="#handleButton" text="&gt;">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                           </top>
+                           <bottom>
+                              <AnchorPane prefHeight="166.0" prefWidth="716.0" style="-fx-background-color: white;" styleClass="anchor-pane" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <HBox layoutX="210.0" layoutY="33.0" prefHeight="166.0" prefWidth="716.0" spacing="10.0" styleClass="anchor-pane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <ListView fx:id="lstReservationInfo" prefHeight="156.0" prefWidth="305.0" styleClass="anchor-pane" />
+                                          <ListView fx:id="lstEquipmentInfo" prefHeight="156.0" prefWidth="285.0" styleClass="anchor-pane" />
+                                          <VBox fx:id="vboxManageReservation" alignment="TOP_CENTER" prefHeight="156.0" prefWidth="127.0">
+                                             <children>
+                                                <Label prefHeight="24.0" prefWidth="112.0" text="Event Status" />
+                                                <Label fx:id="lblReservationStatus" prefHeight="13.0" prefWidth="116.0" text="Reserved">
+                                                   <font>
+                                                      <Font size="24.0" />
+                                                   </font>
+                                                </Label>
+                                                <AnchorPane fx:id="pnReservationMark" prefWidth="163.0">
+                                                   <children>
+                                                      <Label layoutX="3.0" prefHeight="24.0" prefWidth="112.0" text="Mark as" />
+                                                      <ChoiceBox fx:id="cbMarkReservation" layoutX="1.0" layoutY="24.0" prefHeight="25.0" prefWidth="116.0" />
+                                                   </children>
+                                                </AnchorPane>
+                                             </children>
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                             <padding>
+                                                <Insets left="10.0" />
+                                             </padding>
+                                          </VBox>
+                                       </children>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <padding>
+                                          <Insets left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                    </HBox>
+                                 </children>
+                              </AnchorPane>
+                           </bottom>
+                        </BorderPane>
+                        <AnchorPane id="equipment" fx:id="pnlEquipment" prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <BorderPane prefHeight="563.0" prefWidth="759.0">
+                                 <center>
+                                    <TableView fx:id="tblEquipmentView" prefHeight="487.0" prefWidth="759.0" BorderPane.alignment="CENTER">
+                                      <columns>
+                                          <TableColumn fx:id="equipmentId" prefWidth="68.0" text="ID" />
+                                        <TableColumn fx:id="nameColumn" prefWidth="86.0" text="NAME" />
+                                        <TableColumn fx:id="typeColumn" prefWidth="91.0" text="TYPE" />
+                                          <TableColumn fx:id="brandColumn" prefWidth="74.0" text="BRAND" />
+                                          <TableColumn fx:id="serialNumberColumn" prefWidth="90.0" text="SERIAL NO." />
+                                          <TableColumn fx:id="locationColumn" prefWidth="87.0" text="LOCATION" />
+                                          <TableColumn fx:id="isAvailableColumn" prefWidth="93.0" text="AVAILABILITY" />
+                                          <TableColumn fx:id="notesColumn" prefWidth="131.0" text="NOTES" />
+                                      </columns>
+                                    </TableView>
+                                 </center>
+                                 <top>
+                                    <AnchorPane prefHeight="65.0" prefWidth="670.0" styleClass="dash-pane" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <HBox fx:id="hBoxEquipmentControls" alignment="TOP_RIGHT" layoutX="223.0" layoutY="20.0" prefHeight="25.0" prefWidth="489.0" spacing="10.0">
+                                             <children>
+                                                <Button fx:id="btnViewEquipment" mnemonicParsing="false" onAction="#handleButton" prefHeight="35.0" prefWidth="119.0" text="View" />
+                                                <Button fx:id="btnAddEquipment" mnemonicParsing="false" onAction="#handleButton" prefHeight="35.0" prefWidth="119.0" text="Add" />
+                                                <Button fx:id="btnEdit" mnemonicParsing="false" onAction="#editEquipmentTableCell" prefHeight="36.0" prefWidth="112.0" text="Edit" />
+                                                <Button fx:id="btnDeleteEquipment" mnemonicParsing="false" onAction="#removeEquipment" prefHeight="37.0" prefWidth="122.0" text="Delete" />
+                                                <Button fx:id="btnReportDefects" mnemonicParsing="false" onAction="#handleButton" prefHeight="25.0" prefWidth="186.0" text="Report Defects" />
+                                             </children>
+                                          </HBox>
+                                          <Label layoutX="45.0" layoutY="29.0" text="Sort by" />
+                                          <ChoiceBox fx:id="cbSort" layoutX="102.0" layoutY="25.0" prefHeight="25.0" prefWidth="104.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </top>
+                              </BorderPane>
+                           </children></AnchorPane>
+                     </children>
+                  </StackPane>
+               </center>
+            </BorderPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

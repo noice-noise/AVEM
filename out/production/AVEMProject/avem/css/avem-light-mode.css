@@ -1,0 +1,10 @@
+* {
+    -fx-primary:  #FFFF;
+    -fx-secondary: #FFFF;
+    -fx-primarytext: #414141;
+    -fx-secondarytext: #414141;
+
+    -fx-maroon: -main-color;
+    -fx-gold: -secondary-color;
+    -fx-gold-accent: -secondary-color-accent;
+}

@@ -1,0 +1,466 @@
+/*
+    borrowed via k33pto (https://github.com/k33ptoo)
+
+    Light Mode:
+    -fx-primary:  #FFFF;
+    -fx-secondary: #FFFF;
+    -fx-primarytext: #414141;
+    -fx-secondarytext: #414141;
+
+    -fx-button-text-color: #808080;
+
+    -fx-maroon: #971921;
+    -fx-gold: #FACA10;
+    -fx-gold-accent: #FBDB5F;
+
+
+    Dark Mode:
+    -fx-primary: #414141;
+    -fx-secondary: #414141;
+    -fx-primarytext: #FFFF;
+    -fx-secondarytext: #FFFF;
+
+    -fx-button-text-color: #808080;
+
+    -fx-maroon: #FACA10;
+    -fx-gold: #971921;
+    -fx-gold-accent: #641016;
+*/
+
+* {
+    -fx-primary: #414141;
+    -fx-secondary: #414141;
+    -fx-primarytext: #FFFF;
+    -fx-secondarytext: #FFFF;
+
+    -main-color: #971921;
+    -main-color-accent: derive(-main-color, 50%);
+    -secondary-color: #FACA10;
+    -secondary-color-accent: derive(-secondary-color, 50%);
+
+    -fx-button-text-color: derive(-secondary-color, 5%);
+
+    -fx-maroon: -main-color;
+    -fx-gold: -secondary-color;
+    -fx-gold-accent: -secondary-color-accent;
+}
+
+.root {
+    -fx-base: -fx-primary;
+    -fx-background: -fx-base;
+
+    -fx-inner-background: derive(-fx-base, 80%);
+    -fx-inner-background-alt: derive(-fx-control-inner-background, -2%);
+
+    -fx-background-radius: 20 20 20 20;
+    -fx-background-insets: 20 20 20 20;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 30, 0.2, 0.0, 0.0);
+
+    -fx-text-fill: -fx-primarytext;
+    -fx-text-inner-color: -fx-primarytext;
+
+    -fx-faint-focus-color: transparent;
+    -fx-focus-color: -fx-maroon;
+    -fx-selection-bar: -fx-gold;
+}
+
+.text {
+    -fx-text-fill: -fx-primarytext;
+    -fx-font-color: -fx-primarytext;
+}
+
+.label {
+    -fx-text-fill: -fx-primarytext;
+}
+
+.anchor-pane {
+    -fx-background-color: -fx-primary;
+}
+
+.sign-in-pane {
+    -fx-background-color: -fx-gold;
+    -fx-background-radius: 50 50 50 50;
+    -fx-background-insets: 0 5 0 0;
+}
+
+.dash-pane {
+    -fx-background-color: -fx-gold;
+    -fx-background-radius: 50 50 0 0;
+}
+
+#equipment-upper-pane {
+    -fx-background-color: -fx-gold;
+    -fx-background-radius: 30 30 0 0;
+}
+
+#mainHeader {
+    -fx-text-fill: -fx-maroon;
+    -fx-background-color: -fx-primary;
+    -fx-background-radius: 20 20 20 20;
+    -fx-background-insets: 10 0 0 0;
+    -fx-label-padding: 0 0 0 20;
+    -fx-alignment: TOP_LEFT;
+
+}
+
+
+#mainAnchorPane {
+    -fx-background-insets: 50 50 0 50;
+}
+
+.dash-button
+{
+    -fx-alignment: BASELINE_LEFT;
+    -fx-border-radius: 20px 20px 20px 20px;
+    -fx-background-color : -fx-gold ;
+    -fx-text-fill: -fx-maroon ;
+    -fx-font-weight: BOLD;
+    -fx-background-insets: 10 10 10 0;
+}
+
+.dash-button:hover
+{
+    -fx-background-color : -fx-gold ;
+    -fx-background-radius: 25 25 25 25;
+    -fx-background-insets: 20 20 20 20;
+    -fx-text-color: -fx-primarytext ;
+    -fx-font-size: 14px;
+    -fx-alignment: BASELINE_CENTER;
+}
+
+
+.dash-button:focused
+{
+    -fx-background-radius: 50 50 50 50;
+    -fx-background-insets: 10 10 10 10;
+    -fx-background-color : -fx-gold ;
+    -fx-text-insets: 50 50 50 50;
+    -fx-text-fill: -fx-maroon;
+}
+
+
+#av-activity {
+    -fx-text-fill: -fx-maroon;
+    -fx-background-color: -fx-gold;
+    -fx-background-radius: 10 10 10 10;
+    -fx-text-insets: 0 0 0 0;
+    -fx-font-size: 11;
+}
+
+#av-activity:hover {
+    -fx-background-color: -fx-gold-accent;
+}
+
+.special-label {
+   -fx-font-weight: BOLD;
+   -fx-text-fill: -fx-maroon;
+}
+
+
+#event-border-pane {
+    -fx-border-color: -fx-primary;
+    -fx-border-width: 0 0;
+}
+
+
+
+.button
+{
+    -fx-background-color : -fx-primary;
+    -fx-background-radius: 25 25 25 25;
+    -fx-text-fill: -fx-maroon;
+    -fx-font-size: 14px;
+}
+
+
+.button:hover
+{
+    -fx-background-radius: 25 25 25 25;
+    -fx-background-color : -fx-gold ;
+
+    -fx-text-insets: 50 50 50 50;
+    -fx-text-fill: -fx-maroon;
+
+    -fx-border-radius: 25 25 25 25;
+    -fx-border-width: 3;
+}
+
+.button:focused
+{
+    -fx-border-radius: 20px 20px 20px 20px;
+    -fx-background-color : -fx-gold ;
+    -fx-text-fill: -fx-maroon ;
+}
+
+
+.function-button {
+    -fx-background-color : -fx-gold-accent;
+    -fx-text-fill: -fx-maroon;
+    -fx-font-size: 14px;
+}
+
+.function-button:hover
+{
+    -fx-background-radius: 25 25 25 25;
+    -fx-background-color : -fx-gold;
+
+    -fx-text-insets: 50 50 50 50;
+    -fx-text-fill: -fx-maroon;
+
+    -fx-border-radius: 25 25 25 25;
+    -fx-border-width: 3;
+    -fx-font-weight: bold;
+}
+
+
+.secondary-button {
+    -fx-background-color : -fx-primary;
+    -fx-text-fill: -fx-button-text-color;
+    -fx-font-size: 14px;
+}
+
+
+.secondary-button:hover {
+    -fx-border-radius: 0 0 0 0;
+    -fx-background-color : transparent;
+    -fx-text-fill: -fx-maroon;
+    -fx-background-insets: 0 0 0 0;
+    -fx-border-color: transparent;
+    -fx-alignment: TOP_CENTER;
+}
+
+.secondary-button:focused {
+    -fx-border-radius: 0 0 0 0;
+    -fx-background-color : -fx-primary;
+    -fx-text-fill: -fx-maroon;
+    -fx-background-insets: 0 0 0 0;
+    -fx-border-color: transparent;
+}
+
+.list-view {
+    -fx-background-color: -fx-primary;
+    -fx-control-inner-background: -fx-primary;
+    -fx-text-fill: -fx-primarytext;
+}
+
+.list-view .virtual-flow .clipped-container .sheet{
+    -fx-background-color: -fx-primary;
+    -fx-text-fill: -fx-primarytext;
+}
+
+.list-view .virtual-flow .corner{
+    -fx-background-color: -fx-primary;
+    -fx-text-fill: -fx-primarytext;
+}
+
+.scroll-pane{
+    -fx-background-color: -fx-primary, -fx-primary;
+    -fx-text-fill: -fx-primarytext;
+    -fx-control-inner-background: -fx-primary;
+}
+
+.scroll-pane .scroll-bar:vertical {
+    -fx-pref-header: 1;
+    -fx-opacity: 0;
+}
+
+.scroll-pane .scroll-bar:horizontal {
+    -fx-pref-header: 1;
+    -fx-opacity: 0;
+}
+
+#check-in-out-scroll-pane{
+    -fx-background-color: -fx-primary, -fx-primary;
+    -fx-text-fill: -fx-primarytext;
+    -fx-control-inner-background: -fx-primary;
+}
+
+#check-in-out-scroll-pane .scroll-bar:vertical {
+    -fx-pref-header: 1;
+    -fx-opacity: 50;
+}
+
+#check-in-out-scroll-pane .scroll-bar:horizontal {
+    -fx-pref-header: 1;
+    -fx-opacity: 0;
+}
+
+.text-area{
+    -fx-background-color: -fx-primary, -fx-primary;
+    -fx-text-fill: -fx-primarytext;
+    -fx-control-inner-background: -fx-primary;
+}
+
+.text-area .content{
+    -fx-background-color: -fx-primary;
+    -fx-control-inner-background: -fx-primary;
+}
+
+.text-area:focused .content{
+    -fx-background-color: -fx-primary;
+    -fx-control-inner-background: -fx-primary;
+}
+
+.text-area .scroll-bar:vertical {
+    -fx-pref-width: 1;
+    -fx-opacity: 0;
+}
+
+.text-area .scroll-bar:horizontal {
+    -fx-pref-header: 1;
+    -fx-opacity: 0;
+}
+
+
+#text-area-regular{
+    -fx-background-color: -fx-primary, -fx-primarytext;
+    -fx-text-fill: -fx-primarytext;
+    -fx-border-color: derive(-fx-primarytext, 50%);
+    -fx-border-width: 1;
+    -fx-control-inner-background: -fx-maroon;
+}
+
+#text-area-regular .content{
+    -fx-background-color: -fx-primary;
+    -fx-control-inner-background: -fx-primary;
+}
+
+#text-area-regular:focused .content{
+    -fx-background-color: -fx-primary;
+    -fx-control-inner-background: -fx-primary;
+}
+
+#text-area-regular .scroll-bar:vertical {
+    -fx-pref-width: 10;
+    -fx-opacity: 100;
+}
+
+#text-area-regular .scroll-bar:horizontal {
+    -fx-pref-header: 10;
+    -fx-opacity: 100;
+}
+
+
+/*
+.text-area {
+    -fx-background-insets: 10 10 10 10;
+    -fx-background-color: -fx-primary;
+    -fx-border-color: -fx-maroon;
+    -fx-border-radius: 10 10 10 10;
+    -fx-prompt-text-fill: -fx-primary;
+    -fx-box-border: -fx-primary;
+        -fx-inner-background: -fx-primary;
+}
+
+.text-area .content{
+    -fx-background-insets: 10 10 10 10;
+    -fx-background-color: -fx-primary;
+    -fx-inner-background: -fx-primary;
+    -fx-box-border: -fx-primary;
+    -fx-prompt-text-fill: -fx-primary;
+    -fx-box-border: -fx-primary;
+    -fx-text-background-color: black;
+
+}
+.text-area .content .text{
+    -fx-font-smoothing-type: GRAY;
+    -fx-background-color: -fx-primary;
+    -fx-border-color: -fx-primary;
+}
+
+
+
+.text-area: focused .content{
+    -fx-background-color: -fx-primary;
+    /*
+        -fx-highlight-fill: -fx-gold;
+        -fx-border-radius: 10 10 10 10;
+        -fx-prompt-text-fill: -fx-primary;
+        -fx-box-border: -fx-primary;
+        -fx-inner-background: -fx-primary;
+        -fx-text-background-color: black;
+
+
+            -fx-background: -fx-maroon;
+            -fx-prompt-text-fill: -fx-primary;
+            -fx-box-border: -fx-primary;
+            -fx-inner-background: -fx-primary;
+            -fx-text-background-color: black;
+    }
+
+
+*/
+
+
+
+
+
+
+.table-view {
+    -fx-background-color: -fx-primary;
+}
+
+.table-view .placeholder{
+    -fx-background-color: -fx-primary;
+    -fx-control-inner-background: -fx-primary;
+}
+
+.table-row-cell {
+    -fx-background-color: -fx-primary;
+    -fx-control-inner-background: -fx-primary;
+}
+
+.table-view .column-header,
+.table-view .column-header-background .filler {
+    -fx-cell-size : 20;
+    -fx-background-color:   -fx-maroon;
+}
+
+
+.table-view .column-header,
+.table-view .column-header-background .filler {
+    -fx-cell-size : 20;
+    -fx-background-color:   -fx-maroon;
+}
+
+.table-view .column-header .label{
+   -fx-text-fill: -fx-primary;
+   -fx-font-weight: bold;
+  -fx-alignment: center;
+  -fx-alignment: CENTER;
+}
+
+.table-view .cell{
+   -fx-cell-size: 30;
+  -fx-text-fill: -fx-primarytext;
+  -fx-alignment: center;
+  -fx-alignment: CENTER;
+}
+
+.table-row-cell:selected {
+    -fx-background-color:  -fx-gold;
+    -fx-text-fill: -fx-maroon;
+ }
+ .table-row-cell:selected .text {
+        -fx-fill-cell : -fx-gold ;
+ }
+
+.table-view .increment-button ,.table-view .decrement-button {
+    -fx-background-color: -fx-gold;
+	-fx-background-radius: 2em;
+}
+
+table-view .scroll-bar:horizontal .thumb,
+.table-view .scroll-bar:vertical .thumb {
+    -fx-background-color: derive(-fx-maroon,90%);
+	-fx-background-insets: 2, 0, 0;
+	-fx-background-radius: 2em;
+	}
+
+.table-view .scroll-bar:horizontal .track,
+.table-view .scroll-bar:vertical .track{
+	-fx-background-color: transparent;
+	-fx-border-color: derive(-fx-maroon,80%);
+	-fx-background-radius: 2em;
+	-fx-border-radius:2em;
+}

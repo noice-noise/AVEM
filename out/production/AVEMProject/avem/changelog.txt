@@ -1,0 +1,61 @@
+
+
+
+# AVEM changelogs
+
+
+// MAJOR TODOs
+
+# Navigation buttons
+- [x] Clickable, switchable, and responsive buttons.
+- [ ] Implement all buttons.
+
+# DeveloperTools
+- [x] DeveloperTools for resetting Equipment Manager.
+- [x] DeveloperTools for initializing Equipment Manager contents.
+
+# UI & Theme
+- [ ] Make style sheets inherited throughout the class.
+- [ ] Responsive all throughout the app with static class.
+
+# Add, Remove, Edit
+- [x] Add equipment through external console then retrieve successfully.
+- [x] (With .exe build) Add equipment through external console then retrieve successfully.
+- [ ] Add equipment UI view translated from console.
+
+# Reserve, Check-in, Check-out
+
+# Create API
+
+
+
+
+v.0.10
+
+Created "main" package for "App.java" class launcher of "Main.java" JavaFX Application.
+Created "core" package for handling essential Java functions.
+Created "fxml" package for complex UI forms and views.
+Created "tests" package for automatic testing in JUnit 4.
+Created "css" package for themes and style sheets.
+Created "resoureces" for icons and other media files.
+
+
+v.0.20
+
+- Created Equipment Manager to handle tests
+- Created comprehensive suite of tests for Equipment Manager.
+- Created basic UI for Dashboard.
+- Created comprehensive pnlDashboard stack pane for handling side bar navigation buttons.
+
+
+v.0.22
+- Finished Equipment Manager file handing with appending, parsing, and retrieving files upon exit.
+
+
+v.0.28
+
+- Created "developer" package for Developer testing tools.
+- Created DeveloperTools.
+- Created AVETheme.
+- Updated UI for Dashboard
+- Created CSS style sheets for UI light mode theme.

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="mainAnchorPane" prefHeight="655.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="avem.fxml.ReserveViewController">
+   <children>
+      <BorderPane layoutX="99.0" layoutY="31.0" prefHeight="640.0" prefWidth="1024.0">
+         <left>
+            <AnchorPane prefHeight="532.0" prefWidth="265.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="36.0" layoutY="24.0" styleClass="special-label" text="Announcements" textFill="#971921">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="39.0" layoutY="252.0" styleClass="special-label" text="Recent Activity" textFill="#971921">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="txtRecentActivity" layoutX="31.0" layoutY="277.0" prefHeight="223.0" prefWidth="200.0" />
+                  <TextArea fx:id="txtAnnouncement" layoutX="31.0" layoutY="50.0" prefHeight="184.0" prefWidth="200.0" />
+               </children>
+            </AnchorPane>
+         </left>
+         <top>
+            <AnchorPane prefHeight="94.0" prefWidth="1071.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="btnBack" layoutX="23.0" layoutY="37.0" mnemonicParsing="false" onAction="#handleButton" prefHeight="35.0" prefWidth="38.0">
+                     <graphic>
+                        <ImageView fx:id="imgBack" fitHeight="31.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/menu/left_96px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <HBox fillHeight="false" layoutX="629.0" layoutY="-30.0" prefHeight="91.0" prefWidth="339.0" spacing="5.0" visible="false">
+                     <children>
+                        <Button contentDisplay="TOP" mnemonicParsing="false" prefHeight="171.0" prefWidth="100.0" text="Reserve">
+                           <graphic>
+                              <ImageView fitHeight="33.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/upper-nav/inscription_48px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button contentDisplay="TOP" mnemonicParsing="false" prefHeight="171.0" prefWidth="100.0" text="Check In/Out">
+                           <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="36.0">
+                                 <image>
+                                    <Image url="@../resources/upper-nav/cardboard_box_48px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </top>
+         <center>
+            <AnchorPane prefHeight="522.0" prefWidth="759.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane layoutX="4.0" layoutY="54.0" prefHeight="468.0" prefWidth="732.0">
+                     <children>
+                        <GridPane layoutX="3.0" prefHeight="310.0" prefWidth="265.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="10.0" prefWidth="120.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="194.0" minWidth="10.0" prefWidth="145.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <TextField fx:id="txtActivity" GridPane.columnIndex="1" />
+                              <TextField fx:id="txtApprovedBy" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                              <TextField fx:id="txtContactPerson" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                              <Label prefHeight="30.0" prefWidth="204.0" text="Activity">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <DatePicker fx:id="datePicker" onAction="#verifyEvent" prefHeight="25.0" prefWidth="217.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <ChoiceBox fx:id="departmentChoiceBox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <Label prefHeight="30.0" prefWidth="204.0" text="Venue" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="30.0" prefWidth="204.0" text="Contact Number" GridPane.rowIndex="7">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="30.0" prefWidth="204.0" text="Contact Person" GridPane.rowIndex="6">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="30.0" prefWidth="204.0" text="Department" GridPane.rowIndex="5">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="30.0" prefWidth="204.0" text="Date" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="30.0" prefWidth="204.0" text="Approved by:" GridPane.rowIndex="8">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="txtContactNumber" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                              <Label prefHeight="30.0" prefWidth="204.0" text="Start Time" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <ChoiceBox fx:id="startTimeChoiceBox" prefHeight="25.0" prefWidth="81.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <ChoiceBox fx:id="venueChoiceBox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <Label prefHeight="30.0" prefWidth="204.0" text="End Time" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <ChoiceBox fx:id="endTimeChoiceBox" prefHeight="25.0" prefWidth="81.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <ChoiceBox fx:id="startTimeOfDay" prefHeight="25.0" prefWidth="60.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                              <ChoiceBox fx:id="endTimeOfDay" prefHeight="25.0" prefWidth="60.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+                           </children>
+                        </GridPane>
+                        <TextArea fx:id="txtAreaNotes" layoutX="4.0" layoutY="362.0" prefHeight="58.0" prefWidth="263.0" />
+                        <Label layoutX="2.0" layoutY="331.0" prefHeight="30.0" prefWidth="204.0" text="Additional Notes">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="tblEquipmentVIew" layoutX="336.0" prefHeight="412.0" prefWidth="371.0">
+                          <columns>
+                            <TableColumn fx:id="nameColumn" prefWidth="89.0" text="Name" />
+                            <TableColumn fx:id="typeColumn" prefWidth="94.0" text="Type" />
+                              <TableColumn fx:id="brandColumn" prefWidth="87.0" text="Brand" />
+                              <TableColumn fx:id="notesColumn" prefWidth="100.0" text="Notes" />
+                          </columns>
+                        </TableView>
+                        <HBox alignment="CENTER_LEFT" layoutY="411.0" prefHeight="64.0" prefWidth="276.0" spacing="5.0">
+                           <children>
+                              <ChoiceBox fx:id="templateChoiceBox" prefHeight="25.0" prefWidth="212.0">
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </ChoiceBox>
+                              <Button fx:id="btnClear" mnemonicParsing="false" onAction="#handleButton" prefHeight="32.0" prefWidth="56.0" styleClass="function-button">
+                                 <graphic>
+                                    <ImageView fx:id="imgClearInputs" fitHeight="28.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../resources/buttons/reset_24px.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <Button fx:id="btnReserve" graphicTextGap="20.0" layoutX="523.0" layoutY="429.0" mnemonicParsing="false" onAction="#handleButton" prefHeight="45.0" prefWidth="174.0" styleClass="function-button" text="Reserve" />
+                     </children>
+                  </AnchorPane>
+                  <Label layoutX="8.0" layoutY="10.0" prefHeight="38.0" prefWidth="176.0" styleClass="special-label" text="Reservations" textFill="#971921">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="347.0" layoutY="11.0" prefHeight="38.0" prefWidth="131.0" styleClass="special-label" text="Equipment" textFill="#971921">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnViewEquipment" layoutX="525.0" layoutY="17.0" mnemonicParsing="false" onAction="#handleButton" styleClass="function-button" text="View Available Equipment" />
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+      <Button fx:id="btnExit" graphicTextGap="0.0" layoutX="1136.0" layoutY="60.0" mnemonicParsing="false" onAction="#handleButton" prefHeight="51.0" prefWidth="52.0">
+         <graphic>
+            <ImageView fx:id="imgExit" fitHeight="25.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/menu/cancel_48px.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

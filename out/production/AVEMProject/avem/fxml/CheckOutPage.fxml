@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="mainAnchorPane" prefHeight="655.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="avem.fxml.CheckOutPageController">
+   <children>
+      <BorderPane layoutX="71.0" layoutY="39.0" prefHeight="616.0" prefWidth="1012.0">
+         <left>
+            <AnchorPane prefHeight="568.0" prefWidth="290.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="63.0" layoutY="24.0" styleClass="special-label" text="Announcements" textFill="#971921">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="66.0" layoutY="252.0" styleClass="special-label" text="Recent Activity" textFill="#971921">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="txtRecentActivity" layoutX="58.0" layoutY="277.0" prefHeight="223.0" prefWidth="200.0" />
+                  <TextArea fx:id="txtAnnouncement" layoutX="58.0" layoutY="50.0" prefHeight="184.0" prefWidth="200.0" />
+               </children>
+            </AnchorPane>
+         </left>
+         <top>
+            <AnchorPane prefHeight="53.0" prefWidth="1029.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="btnBack" layoutX="23.0" layoutY="37.0" mnemonicParsing="false" onAction="#handleButton" prefHeight="35.0" prefWidth="38.0">
+                     <graphic>
+                        <ImageView fx:id="imgBack" fitHeight="31.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/menu/left_96px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label layoutX="300.0" layoutY="45.0" prefHeight="38.0" prefWidth="302.0" styleClass="special-label" text="Reservations" textFill="#971921">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <HBox fillHeight="false" layoutX="669.0" layoutY="-36.0" prefHeight="91.0" prefWidth="339.0" spacing="5.0" visible="false">
+                     <children>
+                        <Button contentDisplay="TOP" mnemonicParsing="false" prefHeight="171.0" prefWidth="100.0" text="Reserve">
+                           <graphic>
+                              <ImageView fitHeight="33.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/upper-nav/inscription_48px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button contentDisplay="TOP" mnemonicParsing="false" prefHeight="171.0" prefWidth="100.0" text="Check In/Out">
+                           <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="36.0">
+                                 <image>
+                                    <Image url="@../resources/upper-nav/cardboard_box_48px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </top>
+         <center>
+            <AnchorPane prefHeight="505.0" prefWidth="537.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane layoutX="374.0" layoutY="-33.0" prefHeight="535.0" prefWidth="396.0">
+                     <children>
+                        <GridPane layoutX="14.0" layoutY="37.0" prefHeight="308.0" prefWidth="355.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="239.0" minWidth="10.0" prefWidth="132.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="258.0" minWidth="10.0" prefWidth="223.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="59.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="44.0" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="41.0" minHeight="10.0" prefHeight="21.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="46.0" minHeight="10.0" prefHeight="26.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="48.0" minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="53.0" minHeight="10.0" prefHeight="26.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="55.0" minHeight="10.0" prefHeight="24.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="39.0" minHeight="9.0" prefHeight="29.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="65.0" minHeight="10.0" prefHeight="55.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label alignment="BASELINE_LEFT" graphicTextGap="10.0" prefHeight="31.0" prefWidth="150.0" styleClass="special-label" text="Activity" textFill="#971921">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets />
+                                 </GridPane.margin>
+                                 <padding>
+                                    <Insets left="10.0" right="20.0" />
+                                 </padding>
+                              </Label>
+                              <Label fx:id="lblActivity" prefHeight="26.0" prefWidth="198.0" textFill="#971921" GridPane.columnIndex="1">
+                                 <GridPane.margin>
+                                    <Insets />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label alignment="BASELINE_LEFT" graphicTextGap="10.0" prefHeight="31.0" prefWidth="208.0" styleClass="special-label" text="Number" textFill="#971921" GridPane.rowIndex="6">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" right="20.0" />
+                                 </padding>
+                              </Label>
+                              <Label alignment="BASELINE_LEFT" graphicTextGap="10.0" prefHeight="31.0" prefWidth="206.0" styleClass="special-label" text="Contact" textFill="#971921" GridPane.rowIndex="5">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" right="20.0" />
+                                 </padding>
+                              </Label>
+                              <Label alignment="BASELINE_LEFT" graphicTextGap="10.0" prefHeight="31.0" prefWidth="206.0" styleClass="special-label" text="Department" textFill="#971921" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" right="20.0" />
+                                 </padding>
+                              </Label>
+                              <Label alignment="BASELINE_LEFT" graphicTextGap="10.0" prefHeight="31.0" prefWidth="150.0" styleClass="special-label" text="Venue" textFill="#971921" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" right="20.0" />
+                                 </padding>
+                              </Label>
+                              <Label alignment="BASELINE_LEFT" graphicTextGap="10.0" prefHeight="31.0" prefWidth="150.0" styleClass="special-label" text="Time" textFill="#971921" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" right="20.0" />
+                                 </padding>
+                              </Label>
+                              <Label alignment="BASELINE_LEFT" graphicTextGap="10.0" prefHeight="31.0" prefWidth="150.0" styleClass="special-label" text="Date" textFill="#971921" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" right="20.0" />
+                                 </padding>
+                              </Label>
+                              <Label fx:id="lblDepartment" prefHeight="26.0" prefWidth="143.0" textFill="#971921" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <Label fx:id="lblVenue" prefHeight="26.0" prefWidth="143.0" textFill="#971921" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Label fx:id="lblTime" prefHeight="26.0" prefWidth="143.0" textFill="#971921" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label fx:id="lblDate" prefHeight="26.0" prefWidth="143.0" textFill="#971921" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label alignment="TOP_LEFT" graphicTextGap="10.0" prefHeight="46.0" prefWidth="150.0" styleClass="special-label" text="Notes" textFill="#971921" GridPane.rowIndex="9">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" right="20.0" />
+                                 </padding>
+                              </Label>
+                              <Label alignment="BASELINE_LEFT" graphicTextGap="10.0" prefHeight="31.0" prefWidth="204.0" styleClass="special-label" text="Approved by" textFill="#971921" GridPane.rowIndex="7">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" right="20.0" />
+                                 </padding>
+                              </Label>
+                              <Label fx:id="lblNumber" prefHeight="26.0" prefWidth="143.0" textFill="#971921" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                              <Label fx:id="lblContact" prefHeight="26.0" prefWidth="143.0" textFill="#971921" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <Label fx:id="lblEncoded" prefHeight="26.0" prefWidth="143.0" textFill="#971921" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                              <Label fx:id="lblApproved" prefHeight="26.0" prefWidth="143.0" textFill="#971921" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                              <Label alignment="BASELINE_LEFT" graphicTextGap="10.0" prefHeight="31.0" prefWidth="150.0" styleClass="special-label" text="Encoded by" textFill="#971921" GridPane.rowIndex="8">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" right="20.0" />
+                                 </padding>
+                              </Label>
+                              <Label fx:id="lblNotes" alignment="TOP_LEFT" prefHeight="56.0" prefWidth="213.0" textFill="#971921" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                           </children>
+                        </GridPane>
+                        <ListView fx:id="lwEquipment" layoutX="22.0" layoutY="359.0" prefHeight="117.0" prefWidth="339.0" />
+                        <Label layoutX="22.0" layoutY="321.0" prefHeight="38.0" prefWidth="302.0" styleClass="special-label" text="Equipment" textFill="#971921">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="22.0" prefHeight="38.0" prefWidth="302.0" styleClass="special-label" text="Event" textFill="#971921">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnCheckIn" graphicTextGap="20.0" layoutX="63.0" layoutY="490.0" mnemonicParsing="false" onAction="#handleButton" prefHeight="45.0" prefWidth="145.0" styleClass="function-button" text="Check in" />
+                        <Button fx:id="btnCheckOut" graphicTextGap="20.0" layoutX="218.0" layoutY="490.0" mnemonicParsing="false" onAction="#handleButton" prefHeight="45.0" prefWidth="143.0" styleClass="function-button" text="Check out" />
+                     </children>
+                  </AnchorPane>
+                  <ScrollPane layoutX="7.0" layoutY="4.0" prefHeight="487.0" prefWidth="338.0">
+                     <content>
+                        <VBox fx:id="vboxReservations" prefHeight="486.0" prefWidth="336.0" spacing="10.0">
+                           <padding>
+                              <Insets left="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+      <Button fx:id="btnExit" graphicTextGap="0.0" layoutX="1131.0" layoutY="58.0" mnemonicParsing="false" onAction="#handleButton" prefHeight="51.0" prefWidth="52.0">
+         <graphic>
+            <ImageView fx:id="imgExit" fitHeight="25.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/menu/cancel_48px.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>
