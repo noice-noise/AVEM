@@ -3,7 +3,7 @@ Audio-Visual Equipment Manager(AVEM) is a stand-alone application develop
 
 Its purpose is to allow easier, systematic, and portable AV equipment tracking and management for the multimedia and documentation support department at [Cebu Institute of Technology - University](https://cit.edu/) 
 
-![AVEM](https://github.com/noice-noise/audio-visual-equipment-manager/blob/main/avem.gif)
+![AVEM](https://github.com/noice-noise/audio-visual-equipment-manager/blob/main/screenshots/avem.gif)
 
 # Team
 + [Comeros, Raul Jr.](https://www.linkedin.com/in/comerosrauljr/)
@@ -14,12 +14,11 @@ Its purpose is to allow easier, systematic, and portable AV equipment tracking a
 
 # Screenshots
 
-
-| ![AVEM](https://github.com/noice-noise/audio-visual-equipment-manager/blob/main/Screenshot%20(449).png) | ![AVEM](https://github.com/noice-noise/audio-visual-equipment-manager/blob/main/Screenshot%20(450).png) |
+| ![AVEM](https://github.com/noice-noise/audio-visual-equipment-manager/blob/main/screenshots/Screenshot%20(449).png) | ![AVEM](https://github.com/noice-noise/audio-visual-equipment-manager/blob/main/screenshots/Screenshot%20(450).png) |
 |---|---|
-| ![AVEM](https://github.com/noice-noise/audio-visual-equipment-manager/blob/main/Screenshot%20(451).png) | ![AVEM](https://github.com/noice-noise/audio-visual-equipment-manager/blob/main/Screenshot%20(452).png) |
-| ![AVEM](https://github.com/noice-noise/audio-visual-equipment-manager/blob/main/Screenshot%20(424).png) | ![AVEM](https://github.com/noice-noise/audio-visual-equipment-manager/blob/main/Screenshot%20(429).png) |
-| ![AVEM](https://github.com/noice-noise/audio-visual-equipment-manager/blob/main/Screenshot%20(427).png) | ![AVEM](https://github.com/noice-noise/audio-visual-equipment-manager/blob/main/Screenshot%20(430).png) |
+| ![AVEM](https://github.com/noice-noise/audio-visual-equipment-manager/blob/main/screenshots/Screenshot%20(451).png) | ![AVEM](https://github.com/noice-noise/audio-visual-equipment-manager/blob/main/screenshots/Screenshot%20(452).png) |
+| ![AVEM](https://github.com/noice-noise/audio-visual-equipment-manager/blob/main/screenshots/Screenshot%20(424).png) | ![AVEM](https://github.com/noice-noise/audio-visual-equipment-manager/blob/main/screenshots/Screenshot%20(429).png) |
+| ![AVEM](https://github.com/noice-noise/audio-visual-equipment-manager/blob/main/screenshots/Screenshot%20(427).png) | ![AVEM](https://github.com/noice-noise/audio-visual-equipment-manager/blob/main/screenshots/Screenshot%20(430).png) |
 
 
 
