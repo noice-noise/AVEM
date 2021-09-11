@@ -9,7 +9,7 @@ Its purpose is to allow easier, systematic, and portable AV equipment tracking a
 ![AVEM](https://github.com/noice-noise/audio-visual-equipment-manager/blob/main/avem.gif)
 
 # Team
-+ Comeros, Raul Jr.
++ [Comeros, Raul Jr.](https://www.linkedin.com/in/comerosrauljr/)
 + Quiros, Paul John
 + Seblos, Samantha Jane
 + Saycon, Renzo Dannielle
