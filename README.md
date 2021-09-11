@@ -1,6 +1,3 @@
-# AVEM ReadME
-
-
 # AVEM
 Audio-Visual Equipment Manager(AVEM) is a stand-alone application developed using Java and JavaFX for our CpE340 - Modern Systems and Design class.
 
