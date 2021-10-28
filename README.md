@@ -7,9 +7,9 @@ Its purpose is to allow easier, systematic, and portable AV equipment tracking a
 
 # Team
 + [Comeros, Raul Jr.](https://www.linkedin.com/in/comerosrauljr/)
-+ Quiros, Paul John
++ [Quiros, Paul John](https://github.com/Apoool)
 + Saycon, Renzo Dannielle
-+ Seblos, Samantha Jane
++ [Seblos, Samantha Jane](https://github.com/SammyJaneBS)
 
 
 
