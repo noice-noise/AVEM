@@ -183,7 +183,6 @@ public class ReserveViewController implements Initializable {
         } catch (Exception e) {
 
         }
-
     }
 
     public void initEquipmentColumns() {
@@ -212,7 +211,6 @@ public class ReserveViewController implements Initializable {
 
     private void updateEquipmentList() {
         tblEquipmentVIew.setItems(getEquipmentList());
-
     }
 
     private ObservableList<AVEquipment> getEquipmentList() {
@@ -267,7 +265,6 @@ public class ReserveViewController implements Initializable {
                 AVAlert.showMessage("Time Conflict", "Start and End Time cannot be the same.\n Please try again.");
                 endTimeChoiceBox.getSelectionModel().clearSelection();
                 endTimeOfDay.getSelectionModel().clearSelection();
-
             }
 
             // check if start time is after end time
@@ -477,10 +474,7 @@ public class ReserveViewController implements Initializable {
         txtContactNumber.clear();
         txtContactPerson.clear();
         datePicker.getEditor().clear();
-//        datePicker.setValue(LocalDate.now());
 
-//        startTimeChoiceBox.getSelectionModel().clearSelection();
-//        startTimeOfDay.getSelectionModel().clearSelection();
         endTimeChoiceBox.getSelectionModel().clearSelection();
         endTimeOfDay.getSelectionModel().clearSelection();
         departmentChoiceBox.getSelectionModel().clearSelection();
@@ -488,8 +482,6 @@ public class ReserveViewController implements Initializable {
 
         tblEquipmentVIew.getSelectionModel().clearSelection();
         tblEquipmentVIew.getItems().clear();
-
-//        initInputAction();
     }
 
 
@@ -541,7 +533,6 @@ public class ReserveViewController implements Initializable {
         verifyExistingReservation();
         verifyAllInputsAreFilled();
         verifyReservationTimeConflicts();
-
     }
 
     // check if reservation time has overlapping reservation in the same VENUE
@@ -584,7 +575,6 @@ public class ReserveViewController implements Initializable {
 
         LocalTime cStart = LocalTime.of(avStart.getTwentyFourHour(), Integer.valueOf(avStart.getMinutes()));
         LocalTime cEnd = LocalTime.of(avEnd.getTwentyFourHour(), Integer.valueOf(avEnd.getMinutes()));
-
 
         if (cStart.isAfter(lStart) && cStart.isBefore(lEnd) ||
         (cEnd.isAfter(lStart) && cEnd.isBefore(lEnd)) ||
@@ -676,7 +666,6 @@ public class ReserveViewController implements Initializable {
                 equipmentBundle.put(equipment.getEquipmentID(), equipment);
             }
 
-
             reservation = new AVReservation(event, equipmentBundle);
 
         } catch (Exception e) {
@@ -688,7 +677,6 @@ public class ReserveViewController implements Initializable {
         //TODO check if date has conflicts in the Calendar/collection
 
     }
-
 
     private void initBulletinPane() {
         AVEMInfo.initialize();
