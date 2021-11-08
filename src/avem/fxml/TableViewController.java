@@ -51,7 +51,6 @@ public class TableViewController implements Initializable {
         tableView.setItems(getEquipmentList());
     }
 
-
     public void switchToDashboard(ActionEvent actionEvent) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("Dashboard.fxml"));
         Stage window = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();

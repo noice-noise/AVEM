@@ -267,7 +267,6 @@ public class AdminTools {
                 "\n4. Stackoverflow is your friend.");
     }
 
-
     public static void createInitialAccounts() {
         AVEMInfo avemInfo = new AVEMInfo();
         avemInfo.addAccount(new AVAccount("raol", "comeros", AVAccount.ADMIN, "Raul"));

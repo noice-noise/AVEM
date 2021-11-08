@@ -197,7 +197,6 @@ public class CheckInOutPageController implements Initializable {
         return wasCheckedIn;
     }
 
-
     private void updateRecentActivity(String activity) {
         AVEMInfo.updateRecentActivity(activity);
         txtRecentActivity.setText("");
@@ -206,7 +205,6 @@ public class CheckInOutPageController implements Initializable {
 
     private void processCheckOut() {
         try {
-
             ObservableList<AVEquipment> eqBundle = CheckInOutEquipment.viewEquipmentBundle(selectedReservation);
             selectedReservation = CheckInOutEquipment.getReservation();
             reservationManager.updateReservationManagerFile();
@@ -226,7 +224,6 @@ public class CheckInOutPageController implements Initializable {
                     equipmentManager.getEquipment(ave).setCurrentLocation(selectedReservation.getEvent().getEventVenue());
                     equipmentManager.updateEquipmentManager();
                 }
-
             }
 
         } catch (NullPointerException ne) {
@@ -235,7 +232,6 @@ public class CheckInOutPageController implements Initializable {
         } catch (Exception e) {
             AVAlert.showMessage("Error", "An error occurred. Please try again.");
         }
-
     }
 
     private void processCheckIn() {
@@ -259,7 +255,6 @@ public class CheckInOutPageController implements Initializable {
                 equipmentManager.getEquipment(ave).setCurrentLocation("Main Storage");
                 equipmentManager.updateEquipmentManager();
             }
-
         }
     }
 
@@ -279,8 +274,6 @@ public class CheckInOutPageController implements Initializable {
         cbViewMode.getItems().add("All Reservations");
         cbViewMode.getSelectionModel().selectFirst();
         cbViewMode.toFront();
-
-
         cbViewMode.setOnAction(actionEvent -> handleViewMode());
     }
 
@@ -306,7 +299,6 @@ public class CheckInOutPageController implements Initializable {
                 String.valueOf(startDate.getDayOfMonth()),
                 String.valueOf(startDate.getYear()));
 
-
         AVDate dateLimit = new AVDate(String.valueOf(endDate.getMonthValue()),
                 String.valueOf(endDate.getDayOfMonth()),
                 String.valueOf(endDate.getYear()));
@@ -323,7 +315,6 @@ public class CheckInOutPageController implements Initializable {
                     String.valueOf(newDate.getDayOfMonth()),
                     String.valueOf(newDate.getYear()));
         }
-
     }
 
     private void setWeekDateRange() {
@@ -366,7 +357,6 @@ public class CheckInOutPageController implements Initializable {
                         "     " + r.getEvent().getEventStartTime() + " – " +
                         r.getEvent().getEventEndTime() + "\n" +
                         "Equipment  " + "  " + r.getEquipmentStatus() + "\n";
-
 
         AVButton button = new AVButton(rLabel, r);
         button.setMaxWidth(Double.MAX_VALUE);
@@ -429,7 +419,4 @@ public class CheckInOutPageController implements Initializable {
         txtRecentActivity.appendText(RECENT_ACTIVITY);
         txtAnnouncement.appendText(ANNOUNCEMENT);
     }
-
-
-
 }

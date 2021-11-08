@@ -49,11 +49,9 @@ public class AccountView {
         window.setTitle("Sign up Account");
         window.initStyle(StageStyle.UNDECORATED);
 
-
         lblHeader = new Label();
         lblHeader.setText("Sign up New Account");
         lblHeader.setFont(AVEMTheme.FONT_ALERT_HEADERS);
-
 
         labelsString = new String[]{
                 "Username", "Password", "Confirm Password", "Account Type", "Name", "Additional Info"};
@@ -89,7 +87,6 @@ public class AccountView {
                 }
             }
         });
-
 
         btnClear.setOnAction(actionEvent -> {
             for (int i = 0; i < MAX_ROW_LABELS; i++) {
@@ -211,7 +208,6 @@ public class AccountView {
         }
     }
 
-
     public static AVAccount displayEdit(AVAccount toEdit) {
 
         String[] oldAccountDataString = new String[]{
@@ -225,11 +221,9 @@ public class AccountView {
         window.setTitle("Edit Account");
         window.initStyle(StageStyle.UNDECORATED);
 
-
         lblHeader = new Label();
         lblHeader.setText("Edit Account");
         lblHeader.setFont(AVEMTheme.FONT_ALERT_HEADERS);
-
 
         labelsString = new String[]{
                 "Username", "Password", "Confirm Password", "Account Type", "Name", "Additional Info"};

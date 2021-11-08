@@ -12,7 +12,7 @@ import java.util.function.Consumer;
 /**
  *  This is a modified code to fit into AVEM's implementation needs.
  *
- *  Credits to this code from SalomonBrys on gihub.
+ *  Credits to this code from SalomonBrys on github.
  *
  *  SalomonBrys/MultiSelectTableView.java
  *  <script src="https://gist.github.com/SalomonBrys/8039ecdbbfc0fa465c60e948d0abe8da.js"></script>

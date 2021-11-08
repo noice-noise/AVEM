@@ -83,8 +83,6 @@ public class AVAlert {
         lblContent.setTextAlignment(TextAlignment.CENTER);
 
         btnOk = new Button("Ok");
-
-
         btnOk.setOnAction(actionEvent -> {
             window.close();
         });
@@ -118,8 +116,6 @@ public class AVAlert {
         lblContent.setTextAlignment(TextAlignment.CENTER);
 
         btnOk = new Button("Ok");
-
-
         btnOk.setOnAction(actionEvent -> {
             window.close();
         });

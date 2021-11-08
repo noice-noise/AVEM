@@ -171,7 +171,6 @@ public class DashboardController implements Initializable {
     @FXML
     private ListView lstEquipmentInfo;
 
-
     @FXML
     private Button btnManageAccounts;
     @FXML
@@ -180,7 +179,6 @@ public class DashboardController implements Initializable {
     private Button btnAnnouncements;
     @FXML
     private Button btnUserActivity;
-
 
     /* BUTTON IMAGE ICONS */
     @FXML
@@ -219,7 +217,6 @@ public class DashboardController implements Initializable {
     private Button btnApplyTheme;
     @FXML
     private Button btnResetThemeDefaults;
-
 
     private LocalDate dateControl;
     private LocalDate sundayControl;
@@ -260,7 +257,6 @@ public class DashboardController implements Initializable {
         List<String> themes = getThemeLabels();
         cbThemeColor.getItems().addAll(themes);
         cbThemeColor.getSelectionModel().select(AVEMTheme.getCurrentThemeColor());
-
     }
 
     private void initReservationStatusInfo() {
@@ -329,7 +325,6 @@ public class DashboardController implements Initializable {
                 locationColumn, isAvailableColumn, notesColumn));
         cbSort.getItems().addAll(Arrays.asList(sortString));
         cbSort.setOnAction(actionEvent -> processSort());
-
     }
 
     private void processSort() {
@@ -362,7 +357,6 @@ public class DashboardController implements Initializable {
         initDateControls();
         initCalendarLabels();
         updateCalendarReservations();
-
     }
 
     private void initDateControls() {
@@ -414,7 +408,6 @@ public class DashboardController implements Initializable {
         }
     }
 
-
     private void updateBulletinPane() {
         AVEMInfo.initialize();
         txtAnnouncement.setWrapText(true);
@@ -457,7 +450,6 @@ public class DashboardController implements Initializable {
         });
     }
 
-
     private void updateCalendarReservations() {
         LocalDate ldStart = sundayControl;
         LocalDate ldEnd = sundayControl.plusDays(6);
@@ -487,7 +479,6 @@ public class DashboardController implements Initializable {
             if (parsedReservations.size() > 0) {
                 createBoxesFor(parsedReservations);
             }
-
 
             LocalDate newDate = LocalDate.of(Integer.parseInt(dateCounter.getYear()),
                     Integer.parseInt(dateCounter.getMonth()),
@@ -543,13 +534,11 @@ public class DashboardController implements Initializable {
     }
 
     private void updateGridLabel(Label gdLabel) {
-
         if (dateControl.getMonth() != currentMonth) {
             gdLabel.setOpacity(0.3);
         } else {
             gdLabel.setOpacity(1);
         }
-
         gdLabel.setText(String.valueOf(dateControl.getDayOfMonth()));
         dateControl = dateControl.plusDays(1);
     }
@@ -604,7 +593,6 @@ public class DashboardController implements Initializable {
         updateEquipmentListView(res);
     }
 
-
     private void updateEquipmentListView(AVReservation res) {
         lstEquipmentInfo.getItems().clear();
         lstEquipmentInfo.getItems().add("RESERVED EQUIPMENT: ");
@@ -650,7 +638,6 @@ public class DashboardController implements Initializable {
             initCalendarLabels();
             updateCalendarReservations();
         } else if (actionEvent.getSource() == btnCalendarPrev) {
-            ;
             sundayControl = sundayControl.minusDays(7);
             initCalendarLabels();
             updateCalendarReservations();
@@ -805,9 +792,6 @@ public class DashboardController implements Initializable {
             System.out.println("Add equipment success.");
             equipmentManager.addEquipment(avEquipment);
             updateRecentActivity(CURRENT_ACCOUNT + " added " + avEquipment.getName() + " equipment.");
-//            initEquipmentTable();
-////            tblEquipmentView.refresh();
-//            initEquipmentTable();
             refreshEquipmentTable();
         }
     }
@@ -826,8 +810,6 @@ public class DashboardController implements Initializable {
 
     public void editEquipmentTableCell(ActionEvent actionEvent) {
 
-
-
         try {
             AVEquipment selectedAVEquipment = tblEquipmentView.getSelectionModel().getSelectedItem();
             if (selectedAVEquipment == null) {
@@ -841,7 +823,6 @@ public class DashboardController implements Initializable {
                     updateRecentActivity(CURRENT_ACCOUNT + " edited " + selectedAVEquipment.getName() + " equipment.");
                 }
             }
-
         } catch (NullPointerException ne) {
             ne.printStackTrace();
             AVAlert.showMessage("Select Equipment", "Please select an equipment to edit.");
@@ -920,6 +901,7 @@ public class DashboardController implements Initializable {
                 "\n2. Installing in a new computer system." +
                 "\n3. The system is subject for full reset." +
                 "\nPress Yes if this you still wish to proceed.");
+
         if (yes) {
             equipmentManager.resetAllFilesAndDirectory();
             reservationManager.resetAllFilesAndDirectory();

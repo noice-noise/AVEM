@@ -153,8 +153,8 @@ public class CheckInOutEquipment implements Initializable {
             if (selectedEquipment.size() != 1) {
                 AVAlert.showMessage("Invalid", "Please select only one specific equipment.");
             } else if (selectedEquipment.size() == 1) {
-                try {
 
+                try {
                     AVEquipment selectedAVEquipment = selectedEquipment.get(0);
 
                     if (selectedAVEquipment == null) {
@@ -211,8 +211,6 @@ public class CheckInOutEquipment implements Initializable {
             if (report.trim().length() < 0) {
                 throw new IllegalArgumentException("Sorry, report is empty.");
             }
-
-
         } catch (Exception e) {
 
         }

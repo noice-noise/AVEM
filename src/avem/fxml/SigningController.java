@@ -27,26 +27,21 @@ public class SigningController implements Initializable {
 
     @FXML
     private TextField txtUsername;
-
     @FXML
     private Button btnAbout;
-
     @FXML
     private Button btnForgotPassword;
-
     @FXML
     private Button btnSignIn;
-
     @FXML
     private PasswordField txtPassword;
-
     @FXML
     private Button btnSignInAsGuest;
-
     @FXML
     private Button btnQuit;
 
     private AVEMInfo accountInfo;
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

@@ -72,7 +72,6 @@ public class ReserveEquipment implements Initializable {
         return selectedEquipment;
     }
 
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         initializeView();
@@ -87,7 +86,6 @@ public class ReserveEquipment implements Initializable {
         buildView();
         startTheParty();
     }
-
 
     private static void buildView() {
 

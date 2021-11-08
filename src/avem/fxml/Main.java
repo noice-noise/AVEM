@@ -27,8 +27,6 @@ public class Main extends Application {
         window.initStyle(StageStyle.TRANSPARENT);
         window.setScene(scene);
         window.setTitle("AVEM v.xx");
-
-
         window.show();
 
         AVEMWindows.makeMovable(window, root);
