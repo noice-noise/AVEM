@@ -16,9 +16,5 @@ Note: Add the path to JavaFX SDK "lib"
 Sample:
 `--module-path "C:\Program Files\Java\openjfx-16_windows-x64_bin-sdk\javafx-sdk-16\lib" --add-modules javafx.controls,javafx.fxml`
 
-
-
-
-
 ### Reference
 from **Brocode ** Youtube tutorial  
