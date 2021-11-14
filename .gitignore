@@ -26,3 +26,4 @@ hs_err_pid*
 /avem-info
 /equipment-manager
 /reservation-manager
+*.data
