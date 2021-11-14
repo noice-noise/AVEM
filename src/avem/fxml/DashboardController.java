@@ -738,7 +738,7 @@ public class DashboardController implements Initializable {
     }
 
     private void displayAccountView() throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("AccountsView.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/AccountsView.fxml"));
         Stage window = new Stage();
         window.initStyle(StageStyle.TRANSPARENT);
         window.initModality(Modality.APPLICATION_MODAL);
@@ -939,7 +939,7 @@ public class DashboardController implements Initializable {
     }
 
     public void switchToReservePane(ActionEvent actionEvent) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("ReserveView.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/ReserveView.fxml"));
 
         Stage window = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
 
@@ -955,7 +955,7 @@ public class DashboardController implements Initializable {
     }
 
     public void switchToCheckOut(ActionEvent actionEvent) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("CheckInOutPage.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/CheckInOutPage.fxml"));
         Stage window = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
 
         Scene scene = new Scene(root);
@@ -970,7 +970,7 @@ public class DashboardController implements Initializable {
 
     @FXML
     private void switchToSignOut() throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("SigningPage.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/SigningPage.fxml"));
         Stage window = (Stage) ((Node) btnSignOut).getScene().getWindow();
 
         Scene scene = new Scene(root);
@@ -985,7 +985,7 @@ public class DashboardController implements Initializable {
 
     @FXML
     private void switchToRefreshPage() throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("RefreshPage.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/RefreshPage.fxml"));
         Stage refreshWindow = new Stage();
 
         Scene scene = new Scene(root);

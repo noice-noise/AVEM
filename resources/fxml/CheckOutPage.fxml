@@ -45,7 +45,7 @@
                      <graphic>
                         <ImageView fx:id="imgBack" fitHeight="31.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../resources/menu/left_96px.png" />
+                              <Image url="@../menu/left_96px.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -61,7 +61,7 @@
                            <graphic>
                               <ImageView fitHeight="33.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../resources/upper-nav/inscription_48px.png" />
+                                    <Image url="@../upper-nav/inscription_48px.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -70,7 +70,7 @@
                            <graphic>
                               <ImageView fitHeight="35.0" fitWidth="36.0">
                                  <image>
-                                    <Image url="@../resources/upper-nav/cardboard_box_48px.png" />
+                                    <Image url="@../upper-nav/cardboard_box_48px.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -240,7 +240,7 @@
          <graphic>
             <ImageView fx:id="imgExit" fitHeight="25.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../resources/menu/cancel_48px.png" />
+                  <Image url="@../menu/cancel_48px.png" />
                </image>
             </ImageView>
          </graphic>

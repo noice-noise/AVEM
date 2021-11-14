@@ -33,7 +33,7 @@
                            <graphic>
                               <ImageView fx:id="imgDashboard" fitHeight="28.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../resources/nav/dashboard_layout_96px.png" />
+                                    <Image url="@../nav/dashboard_layout_96px.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -42,7 +42,7 @@
                            <graphic>
                               <ImageView fx:id="imgEquipment" fitHeight="28.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../resources/nav/bursts_96px.png" />
+                                    <Image url="@../nav/bursts_96px.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -51,7 +51,7 @@
                            <graphic>
                               <ImageView fx:id="imgAccounts" fitHeight="28.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../resources/nav/account_96px.png" />
+                                    <Image url="@../nav/account_96px.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -60,7 +60,7 @@
                            <graphic>
                               <ImageView fx:id="imgSettings" fitHeight="28.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../resources/nav/settings_96px.png" />
+                                    <Image url="@../nav/settings_96px.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -71,7 +71,7 @@
                      <graphic>
                         <ImageView fx:id="imgSignOut" fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../resources/buttons/male_user_48px.png" />
+                              <Image url="@../buttons/male_user_48px.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -99,7 +99,7 @@
                                  <graphic>
                                     <ImageView fx:id="imgReserve" fitHeight="33.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../resources/upper-nav/inscription_48px.png" />
+                                          <Image url="@../upper-nav/inscription_48px.png" />
                                        </image>
                                     </ImageView>
                                  </graphic>
@@ -108,7 +108,7 @@
                                  <graphic>
                                     <ImageView fx:id="imgCheckInOut" fitHeight="35.0" fitWidth="36.0">
                                        <image>
-                                          <Image url="@../resources/upper-nav/cardboard_box_48px.png" />
+                                          <Image url="@../upper-nav/cardboard_box_48px.png" />
                                        </image>
                                     </ImageView>
                                  </graphic></Button>
@@ -122,7 +122,7 @@
                         </HBox>
                         <HBox alignment="BASELINE_LEFT" fillHeight="false" layoutX="165.0" prefHeight="91.0" prefWidth="339.0" spacing="5.0" visible="false">
                            <children>
-                              <Label id="mainHeader" fx:id="lblWindowHeader" prefHeight="81.0" prefWidth="312.0" stylesheets="@../css/base.css" text="Home">
+                              <Label id="mainHeader" fx:id="lblWindowHeader" prefHeight="81.0" prefWidth="312.0" text="Home">
                                  <font>
                                     <Font size="48.0" />
                                  </font>
@@ -139,7 +139,7 @@
                            <graphic>
                               <ImageView fx:id="imgExit" fitHeight="25.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../resources/menu/cancel_48px.png" />
+                                    <Image url="@../menu/cancel_48px.png" />
                                  </image>
                               </ImageView>
                            </graphic>

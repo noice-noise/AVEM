@@ -689,7 +689,7 @@ public class ReserveViewController implements Initializable {
     }
 
     public void goBack() throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("Dashboard.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/Dashboard.fxml"));
         Stage window = (Stage) btnBack.getScene().getWindow();
         Scene scene = new Scene(root);
         scene.setFill(Color.TRANSPARENT);

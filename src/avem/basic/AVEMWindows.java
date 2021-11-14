@@ -22,7 +22,7 @@ public class AVEMWindows {
 
     public void change(ActionEvent actionEvent, String toFXML) throws IOException {
 
-        Parent viewParent = FXMLLoader.load(getClass().getResource("avem/fxml/Dashboard.fxml"));
+        Parent viewParent = FXMLLoader.load(getClass().getResource("/fxml/Dashboard.fxml"));
         Scene scene = new Scene(viewParent);
 
         Stage window = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();

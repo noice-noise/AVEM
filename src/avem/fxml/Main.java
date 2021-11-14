@@ -19,7 +19,7 @@ public class Main extends Application {
     public void start(Stage window) throws Exception{
         initDarkMode();
 
-        Parent root = FXMLLoader.load(getClass().getResource("SigningPage.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/SigningPage.fxml"));
         Scene scene = new Scene(root);
 
         scene.getStylesheets().addAll(AVEMTheme.getStyleSheets());
