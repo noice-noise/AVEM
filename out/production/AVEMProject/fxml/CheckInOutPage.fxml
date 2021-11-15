@@ -17,7 +17,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="mainAnchorPane" prefHeight="655.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="avem.fxml.CheckInOutPageController">
+<AnchorPane id="mainAnchorPane" prefHeight="655.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="avem.controllers.CheckInOutPageController">
    <children>
       <BorderPane layoutX="71.0" layoutY="39.0" prefHeight="616.0" prefWidth="1012.0">
          <left>
