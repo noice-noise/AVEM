@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="mainAnchorPane" prefHeight="470.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="avem.fxml.AccountsViewController">
+<AnchorPane id="mainAnchorPane" prefHeight="470.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="avem.controllers.AccountsViewController">
    <children>
       <AnchorPane layoutX="27.0" layoutY="42.0" prefHeight="407.0" prefWidth="546.0" AnchorPane.bottomAnchor="51.0" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="27.0" AnchorPane.topAnchor="42.0">
          <children>

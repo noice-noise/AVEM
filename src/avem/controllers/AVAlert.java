@@ -1,4 +1,4 @@
-package avem.fxml;
+package avem.controllers;
 
 import avem.basic.AVEMTheme;
 import avem.basic.AVEMWindows;

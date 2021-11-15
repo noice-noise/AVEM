@@ -1,4 +1,4 @@
-package avem.fxml;
+package avem.controllers;
 
 import avem.core.AVEquipment;
 import javafx.application.Platform;

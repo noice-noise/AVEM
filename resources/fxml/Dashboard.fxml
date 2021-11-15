@@ -21,7 +21,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="mainAnchorPane" fx:id="pnlMainAnchorPane" prefHeight="655.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="avem.fxml.DashboardController">
+<AnchorPane id="mainAnchorPane" fx:id="pnlMainAnchorPane" prefHeight="655.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="avem.controllers.DashboardController">
    <children>
       <BorderPane id="event-border-pane" prefHeight="640.0" prefWidth="1024.0">
          <left>

@@ -1,7 +1,7 @@
 package avem.basic;
 
 import avem.core.AVAccount;
-import avem.fxml.AVAlert;
+import avem.controllers.AVAlert;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;

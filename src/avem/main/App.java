@@ -1,6 +1,6 @@
 package avem.main;
 
-import avem.fxml.Main;
+import avem.controllers.Main;
 
 public class App {
     public static void main(String[] args) {
