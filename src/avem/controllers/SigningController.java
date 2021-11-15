@@ -46,13 +46,19 @@ public class SigningController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         AVEMInfo.setFirstAccessAsTrue();
+        FillSuperAdminInfo();
+    }
+
+    private void FillSuperAdminInfo() {
+        txtUsername.setText(("admin"));
+        txtPassword.setText("admin");
     }
 
     @FXML
     public void handleButton(ActionEvent actionEvent) {
 
         if (actionEvent.getSource() == btnForgotPassword) {
-            AVAlert.showMessage("Forgot Password", "Resetting of account passwords requires admin access.\n\nInform the assigned Department Head\nto reset your password.");
+            AVAlert.showMessage("Forgot Password", "The recovery link has been sent to the email.\n\nAlso, you can inform the assigned Department Head\nto reset your password instead.");
         } else if (actionEvent.getSource() == btnAbout) {
             AVAlert.showMessage("About", "Developed by Team Graduate Rata \n\n Comeros, RJr.\nSaycon,\tDR.\nSeblos,\tSJ.\nQuiros,\tPJ.");
         } else if (actionEvent.getSource() == btnQuit) {
