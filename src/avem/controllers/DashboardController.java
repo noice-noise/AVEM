@@ -84,7 +84,8 @@ public class DashboardController implements Initializable {
     private Button btnReserve;
     @FXML
     private Button btnCheckout;
-
+    @FXML
+    private Button btnSearch;
 
     /* EQUIPMENT TABLE */
     @FXML
@@ -197,6 +198,8 @@ public class DashboardController implements Initializable {
     private ImageView imgCheckInOut;
     @FXML
     private ImageView imgExit;
+    @FXML
+    private ImageView imgSearch;
 
     /*  SETTINGS BUTTONS  */
     @FXML
@@ -217,6 +220,7 @@ public class DashboardController implements Initializable {
     private Button btnApplyTheme;
     @FXML
     private Button btnResetThemeDefaults;
+
 
     private LocalDate dateControl;
     private LocalDate sundayControl;
@@ -350,7 +354,7 @@ public class DashboardController implements Initializable {
 
     private void initImageIcons() {
         AVEMTheme.adjustImgThemeColor(Arrays.asList(imgDashboard, imgEquipment, imgAccounts, imgSettings,
-                imgSignOut, imgReserve, imgCheckInOut, imgExit));
+                imgSignOut, imgReserve, imgCheckInOut, imgExit, imgSearch));
     }
 
     private void initCalendarGrid() {
@@ -409,7 +413,7 @@ public class DashboardController implements Initializable {
     }
 
     private void updateBulletinPane() {
-        AVEMInfo.initialize();
+//        AVEMInfo.initialize();
         txtAnnouncement.setWrapText(true);
         txtRecentActivity.setWrapText(true);
         txtRecentActivity.setEditable(false);

@@ -9,6 +9,7 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -150,18 +151,35 @@
                <right>
                   <AnchorPane prefHeight="521.0" prefWidth="292.0" BorderPane.alignment="CENTER">
                      <children>
-                        <Label layoutX="28.0" layoutY="30.0" styleClass="special-label" text="Announcements" textFill="#971921">
+                        <Label layoutX="20.0" layoutY="68.0" styleClass="special-label" text="Announcements" textFill="#971921">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>
                         </Label>
-                        <Label layoutX="29.0" layoutY="258.0" styleClass="special-label" text="Recent Activity" textFill="#971921">
+                        <Label layoutX="21.0" layoutY="296.0" styleClass="special-label" text="Recent Activity" textFill="#971921">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>
                         </Label>
-                        <TextArea fx:id="txtRecentActivity" layoutX="23.0" layoutY="288.0" prefHeight="223.0" prefWidth="200.0" />
-                        <TextArea fx:id="txtAnnouncement" layoutX="22.0" layoutY="61.0" prefHeight="184.0" prefWidth="200.0" />
+                        <TextArea fx:id="txtRecentActivity" layoutX="15.0" layoutY="326.0" prefHeight="223.0" prefWidth="200.0" />
+                        <TextArea fx:id="txtAnnouncement" layoutX="14.0" layoutY="99.0" prefHeight="184.0" prefWidth="200.0" />
+                        <HBox layoutX="21.0" layoutY="14.0" prefHeight="30.0" prefWidth="212.0" spacing="5.0">
+                           <children>
+                              <TextField prefHeight="32.0" prefWidth="149.0" promptText="Search Reservations" />
+                              <Button fx:id="btnSearch" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false">
+                                 <graphic>
+                                    <ImageView fx:id="imgSearch" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../buttons/search_24px.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
                      </children>
                   </AnchorPane>
                </right>
