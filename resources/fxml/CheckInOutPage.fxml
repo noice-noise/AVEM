@@ -199,7 +199,7 @@
                      <content>
                         <VBox id="check-in-out-scroll-pane" fx:id="vboxReservations" prefHeight="486.0" prefWidth="336.0" spacing="10.0">
                            <padding>
-                              <Insets left="10.0" top="10.0" />
+                              <Insets left="10.0" right="10.0" top="10.0" />
                            </padding>
                         </VBox>
                      </content>

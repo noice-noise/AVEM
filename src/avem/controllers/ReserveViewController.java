@@ -52,6 +52,8 @@ public class ReserveViewController implements Initializable {
     public Button btnReserve;
     @FXML
     public Button btnViewEquipment;
+    @FXML
+    public Button btnUploadLetter;
 
     /* BUTTON IMAGE ICONS */
     @FXML
@@ -60,6 +62,8 @@ public class ReserveViewController implements Initializable {
     private ImageView imgExit;
     @FXML
     private ImageView imgClearInputs;
+    @FXML
+    private  ImageView imgUploadLetter;
 
     /* RESERVATION GRID */
     @FXML
@@ -158,7 +162,7 @@ public class ReserveViewController implements Initializable {
     }
 
     private void initImageIcons() {
-        AVEMTheme.adjustImgThemeColor(Arrays.asList(imgBack, imgExit, imgClearInputs));
+        AVEMTheme.adjustImgThemeColor(Arrays.asList(imgBack, imgExit, imgClearInputs, imgUploadLetter));
     }
 
     private void initManagers() {

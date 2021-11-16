@@ -53,8 +53,7 @@ public class AccountView {
         lblHeader.setText("Sign up New Account");
         lblHeader.setFont(AVEMTheme.FONT_ALERT_HEADERS);
 
-        labelsString = new String[]{
-                "Username", "Password", "Confirm Password", "Account Type", "Name", "Additional Info"};
+        labelsString = getStringLabels();
 
         labels = new ArrayList<>();
         textFields = new ArrayList<>();
@@ -147,6 +146,18 @@ public class AccountView {
         }
 
         return null;
+    }
+
+    private static String[] getStringLabels() {
+        // the commented code statement below is the original functional code
+//        labelsString = new String[]{
+//                "Username", "Password", "Confirm Password", "Account Type", "Name", "Additional Info"};
+
+        // the code statement below IS NOT PROPERLY IMPLEMENTED and
+        // is a modified form for demo purposes
+        String[] labelsString = new String[]{
+                "Username", "Password", "Confirm Password", "Account Type", "Email", "Department/Course", "Name", "Additional Info"};
+        return labelsString;
     }
 
     private static int parseAccountAccessValue(String toParse) {

@@ -168,7 +168,7 @@
                               <Font size="14.0" />
                            </font>
                         </Label>
-                        <TableView fx:id="tblEquipmentVIew" layoutX="336.0" prefHeight="412.0" prefWidth="371.0">
+                        <TableView fx:id="tblEquipmentVIew" layoutX="336.0" prefHeight="363.0" prefWidth="371.0">
                           <columns>
                             <TableColumn fx:id="nameColumn" prefWidth="89.0" text="Name" />
                             <TableColumn fx:id="typeColumn" prefWidth="94.0" text="Type" />
@@ -176,14 +176,14 @@
                               <TableColumn fx:id="notesColumn" prefWidth="100.0" text="Notes" />
                           </columns>
                         </TableView>
-                        <HBox alignment="CENTER_LEFT" layoutY="411.0" prefHeight="64.0" prefWidth="276.0" spacing="5.0">
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="411.0" prefHeight="64.0" prefWidth="266.0">
                            <children>
-                              <ChoiceBox fx:id="templateChoiceBox" prefHeight="25.0" prefWidth="212.0">
+                              <ChoiceBox fx:id="templateChoiceBox" prefHeight="25.0" prefWidth="194.0">
                                  <HBox.margin>
-                                    <Insets right="20.0" />
+                                    <Insets right="10.0" />
                                  </HBox.margin>
                               </ChoiceBox>
-                              <Button fx:id="btnClear" mnemonicParsing="false" onAction="#handleButton" prefHeight="32.0" prefWidth="56.0" styleClass="function-button">
+                              <Button fx:id="btnClear" mnemonicParsing="false" onAction="#handleButton" prefHeight="32.0" prefWidth="44.0">
                                  <graphic>
                                     <ImageView fx:id="imgClearInputs" fitHeight="28.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -194,7 +194,25 @@
                               </Button>
                            </children>
                         </HBox>
-                        <Button fx:id="btnReserve" graphicTextGap="20.0" layoutX="523.0" layoutY="429.0" mnemonicParsing="false" onAction="#handleButton" prefHeight="45.0" prefWidth="174.0" styleClass="function-button" text="Reserve" />
+                        <Button fx:id="btnReserve" graphicTextGap="20.0" layoutX="522.0" layoutY="381.0" mnemonicParsing="false" onAction="#handleButton" prefHeight="45.0" prefWidth="174.0" styleClass="function-button" text="Reserve" />
+                        <HBox alignment="CENTER_LEFT" layoutX="347.0" layoutY="373.0" prefHeight="61.0" prefWidth="175.0" spacing="5.0">
+                           <children>
+                              <Label prefHeight="30.0" prefWidth="95.0" text="Upload Letter">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="btnUploadLetter" layoutX="10.0" layoutY="26.0" mnemonicParsing="false" onAction="#handleButton" prefHeight="32.0" prefWidth="56.0">
+                                 <graphic>
+                                    <ImageView fx:id="imgUploadLetter" fitHeight="28.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../buttons/attach_24px.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </HBox>
                      </children>
                   </AnchorPane>
                   <Label layoutX="8.0" layoutY="10.0" prefHeight="38.0" prefWidth="176.0" styleClass="special-label" text="Reservations" textFill="#971921">

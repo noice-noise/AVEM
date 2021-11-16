@@ -19,13 +19,13 @@
                <children>
                   <AnchorPane id="mainAnchorPane" layoutX="14.0" prefHeight="448.0" prefWidth="259.0">
                      <children>
-                        <Button fx:id="btnSignIn" layoutX="17.0" layoutY="247.0" mnemonicParsing="false" onAction="#handleSignIn" prefHeight="46.0" prefWidth="231.0" styleClass="function-button" text="Sign In" />
-                        <Label layoutX="14.0" layoutY="14.0" prefHeight="53.0" prefWidth="216.0" styleClass="special-label" text="Sign In">
+                        <Button fx:id="btnSignIn" layoutX="16.0" layoutY="255.0" mnemonicParsing="false" onAction="#handleSignIn" prefHeight="46.0" prefWidth="231.0" styleClass="function-button" text="Sign In" />
+                        <Label layoutX="14.0" layoutY="31.0" prefHeight="53.0" prefWidth="216.0" styleClass="special-label" text="Sign In">
                            <font>
                               <Font name="System Bold" size="36.0" />
                            </font>
                         </Label>
-                        <VBox layoutX="43.0" layoutY="301.0" prefHeight="125.0" prefWidth="176.0">
+                        <VBox layoutX="43.0" layoutY="322.0" prefHeight="126.0" prefWidth="176.0">
                            <children>
                               <Button fx:id="btnSignInAsGuest" alignment="CENTER" mnemonicParsing="false" onAction="#handleSignIn" prefHeight="30.0" prefWidth="176.0" styleClass="secondary-button" text="Student/Guest" />
                               <Button fx:id="btnSignUp" alignment="CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleButton" prefHeight="30.0" prefWidth="176.0" styleClass="secondary-button" text="Sign up" />
