@@ -20,6 +20,8 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import static avem.basic.AVEMInfo.CURRENT_ACCOUNT;
 import static avem.basic.AVEMTheme.VERSION;
 
 public class SigningController implements Initializable {
@@ -31,6 +33,8 @@ public class SigningController implements Initializable {
     private Button btnAbout;
     @FXML
     private Button btnForgotPassword;
+    @FXML
+    private Button btnSignUp;
     @FXML
     private Button btnSignIn;
     @FXML
@@ -46,6 +50,7 @@ public class SigningController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         AVEMInfo.setFirstAccessAsTrue();
+        AVEMInfo.initialize();
         FillSuperAdminInfo();
     }
 
@@ -60,9 +65,16 @@ public class SigningController implements Initializable {
         if (actionEvent.getSource() == btnForgotPassword) {
             AVAlert.showMessage("Forgot Password", "The recovery link has been sent to the email.\n\nAlso, you can inform the assigned Department Head\nto reset your password instead.");
         } else if (actionEvent.getSource() == btnAbout) {
-            AVAlert.showMessage("About", "Developed by Team Graduate Rata \n\n Comeros, RJr.\nSaycon,\tDR.\nSeblos,\tSJ.\nQuiros,\tPJ.");
+            AVAlert.showMessage("About", "Designed by Team iSpiritu \n\n Abug, FR\n Comeros, R Jr.\nIligan,FW\nSubong, R Jr.\nTecson, J");
         } else if (actionEvent.getSource() == btnQuit) {
             handleExit();
+        } else if (actionEvent.getSource() == btnSignUp) {
+            AVAccount acc = AccountView.displayAdd();
+
+            if (acc != null) {
+                AVEMInfo.addAccount(acc);
+                AVEMInfo.updateRecentActivity("A new account has been signed-up: " + acc.getName() + ".");
+            }
         }
     }
 
