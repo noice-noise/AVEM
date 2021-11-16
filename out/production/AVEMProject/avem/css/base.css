@@ -122,7 +122,7 @@
 {
     -fx-background-color : -fx-gold ;
     -fx-background-radius: 25 25 25 25;
-    -fx-background-insets: 20 20 20 20;
+    -fx-background-insets: 0 10 0 10;
     -fx-text-color: -fx-primarytext ;
     -fx-font-size: 14px;
     -fx-alignment: BASELINE_CENTER;
@@ -183,6 +183,8 @@
 
     -fx-border-radius: 25 25 25 25;
     -fx-border-width: 3;
+
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 30, 0.2, 0.0, 0.0);
 }
 
 .button:focused
