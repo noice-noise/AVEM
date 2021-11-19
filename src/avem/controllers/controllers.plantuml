@@ -1,0 +1,570 @@
+@startuml
+
+title __CONTROLLERS's Class Diagram__\n
+
+  namespace avem.controllers {
+    class avem.controllers.AVAlert {
+        {static} ~ isYes : boolean
+        {static} - HEIGHT : double
+        {static} - WIDTH : double
+        {static} - btnNo : Button
+        {static} - btnOk : Button
+        {static} - btnYes : Button
+        {static} - lblContent : Label
+        {static} - lblHeader : Label
+        {static} - mainHBox : HBox
+        {static} - mainVbox : VBox
+        {static} - scene : Scene
+        {static} - window : Stage
+        {static} + confirmAction()
+        {static} + runBoxrunnnnn()
+        {static} + showMessage()
+        {static} + showMessage()
+    }
+  }
+  
+
+  namespace avem.controllers {
+    class avem.controllers.AccountView {
+        {static} - MAX_ROW_LABELS : int
+        {static} - VALID_PASSWORD_LENGTH : int
+        {static} - avAccount : AVAccount
+        {static} - btnCancel : Button
+        {static} - btnClear : Button
+        {static} - btnMainFunction : Button
+        {static} - fillString : String[]
+        {static} - hbox : HBox
+        {static} - labels : ArrayList<Label>
+        {static} - labelsString : String[]
+        {static} - lblHeader : Label
+        {static} - mainGridPane : GridPane
+        {static} - mainVbox : VBox
+        {static} - scene : Scene
+        {static} - textFields : ArrayList<TextField>
+        {static} - verifiedAdd : boolean
+        {static} - window : Stage
+        {static} + allInputsFilled()
+        {static} + displayAdd()
+        {static} + displayEdit()
+        {static} - getStringLabels()
+        {static} - matchedPasswords()
+        {static} - parseAccountAccessString()
+        {static} - parseAccountAccessValue()
+        {static} - validPasswordLength()
+        {static} - verifiedAccountAccess()
+    }
+  }
+  
+
+  namespace avem.controllers {
+    class avem.controllers.AccountsViewController {
+        - btnAdd : Button
+        - btnCancel : Button
+        - btnEdit : Button
+        - btnRemove : Button
+        - lvAccounts : ListView<AVAccount>
+        + goBack()
+        + handleButton()
+        + initialize()
+        - initListView()
+    }
+  }
+  
+
+  namespace avem.controllers {
+    class avem.controllers.CheckInOutEquipment {
+        {static} + tblEquipmentView : TableView<AVEquipment>
+        {static} - TITLE : String
+        {static} - brandColumn : TableColumn<AVEquipment, String>
+        {static} - btnClose : Button
+        {static} - btnConfirm : Button
+        {static} - btnMarkAll : Button
+        {static} - btnReportDefects : Button
+        {static} - equipmentBundle : HashMap<String, AVEquipment>
+        {static} - equipmentId : TableColumn<AVEquipment, String>
+        {static} - equipmentManager : AVEquipmentManager
+        {static} - lblContext : Label
+        {static} - lblHeader : Label
+        {static} - locationColumn : TableColumn<AVEquipment, String>
+        {static} - mainHBox : HBox
+        {static} - mainVbox : VBox
+        {static} - nameColumn : TableColumn<AVEquipment, String>
+        {static} - notesColumn : TableColumn<AVEquipment, String>
+        {static} - reservation : AVReservation
+        {static} - scene : Scene
+        {static} - selectedEquipment : ObservableList<AVEquipment>
+        {static} - serialNumberColumn : TableColumn<AVEquipment, String>
+        {static} - typeColumn : TableColumn<AVEquipment, String>
+        {static} - window : Stage
+        {static} + getReservation()
+        {static} + initEquipmentColumns()
+        + initialize()
+        {static} + initializeView()
+        {static} + setPreSelectedEquipment()
+        {static} + viewEquipmentBundle()
+        {static} - buildView()
+        {static} - getDefectReport()
+        {static} - getEquipmentList()
+        {static} - initEquipmentTableView()
+        {static} - selectAllPreSelectedShit()
+        {static} - startTheParty()
+        {static} - updateEquipmentList()
+    }
+  }
+  
+
+  namespace avem.controllers {
+    class avem.controllers.CheckInOutPageController {
+        - btnBack : Button
+        - btnCheckIn : Button
+        - btnCheckOut : Button
+        - btnExit : Button
+        - cbViewMode : ChoiceBox<String>
+        - endDate : LocalDate
+        - equipmentBundle : HashMap<String, AVEquipment>
+        - imgBack : ImageView
+        - imgExit : ImageView
+        - lblActivity : Label
+        - lblApproved : Label
+        - lblContact : Label
+        - lblDate : Label
+        - lblDepartment : Label
+        - lblEncoded : Label
+        - lblNotes : Label
+        - lblNumber : Label
+        - lblTime : Label
+        - lblVenue : Label
+        - lwEquipment : ListView
+        - startDate : LocalDate
+        - txtAnnouncement : TextArea
+        - txtRecentActivity : TextArea
+        - vboxReservations : VBox
+        + goBack()
+        + handleButton()
+        + handleExit()
+        + initialize()
+        - checkInEquipment()
+        - checkOutEquipment()
+        - createBox()
+        - createReservationBoxes()
+        - handleViewMode()
+        - initBulletinPane()
+        - initImageIcons()
+        - initManager()
+        - initReservationVBox()
+        - initViewModeChoiceBox()
+        - isReserved()
+        - processCheckIn()
+        - processCheckOut()
+        - processSelectedReservation()
+        - runCheckInUpdates()
+        - runCheckOutUpdates()
+        - setAllDateRange()
+        - setMonthDateRange()
+        - setWeekDateRange()
+        - updateEquipmentListView()
+        - updateRecentActivity()
+        - wasCheckedIn()
+        - wasCheckedOut()
+    }
+  }
+  
+
+  namespace avem.controllers {
+    class avem.controllers.DashboardController {
+        + tblEquipmentView : TableView<AVEquipment>
+        ~ hBoxEquipmentControls : HBox
+        - brandColumn : TableColumn<AVEquipment, String>
+        - btnAccounts : Button
+        - btnAddEquipment : Button
+        - btnAnnouncements : Button
+        - btnAppearance : Button
+        - btnApplyTheme : Button
+        - btnCalendarNext : Button
+        - btnCalendarPrev : Button
+        - btnCheckout : Button
+        - btnDashboard : Button
+        - btnEditProfile : Button
+        - btnEquipment : Button
+        - btnExit : Button
+        - btnFAQs : Button
+        - btnInitSystem : Button
+        - btnManageAccounts : Button
+        - btnReportDefects : Button
+        - btnReserve : Button
+        - btnResetSystem : Button
+        - btnResetThemeDefaults : Button
+        - btnSearch : Button
+        - btnSettings : Button
+        - btnSignOut : Button
+        - btnUserActivity : Button
+        - btnViewEquipment : Button
+        - calendarVBoxes : List<VBox>
+        - cbMarkReservation : ChoiceBox<String>
+        - cbSort : ChoiceBox
+        - cbThemeColor : ChoiceBox<String>
+        - cbThemeMode : ChoiceBox<String>
+        - currentMonth : Month
+        - dateControl : LocalDate
+        - dateTimeFormatter : DateTimeFormatter
+        - entireWeekReservations : HashMap<Integer, ArrayList<AVReservation>>
+        - equipmentId : TableColumn<AVEquipment, String>
+        - fridayVbox : VBox
+        - imgAccounts : ImageView
+        - imgCheckInOut : ImageView
+        - imgDashboard : ImageView
+        - imgEquipment : ImageView
+        - imgExit : ImageView
+        - imgReserve : ImageView
+        - imgSearch : ImageView
+        - imgSettings : ImageView
+        - imgSignOut : ImageView
+        - isAvailableColumn : TableColumn<AVEquipment, Boolean>
+        {static} - isFirstDashboardVisit : boolean
+        - lblFriday : Label
+        - lblMonday : Label
+        - lblMonthYear : Label
+        - lblReservationStatus : Label
+        - lblSaturday : Label
+        - lblSunday : Label
+        - lblThursday : Label
+        - lblTuesday : Label
+        - lblWednesday : Label
+        - lblWindowHeader : Label
+        - locationColumn : TableColumn<AVEquipment, String>
+        - lstEquipmentInfo : ListView
+        - lstReservationInfo : ListView
+        - mondayVbox : VBox
+        - nameColumn : TableColumn<AVEquipment, String>
+        - notesColumn : TableColumn<AVEquipment, String>
+        - pnReservationMark : AnchorPane
+        - pnlAccounts : AnchorPane
+        - pnlAppearance : AnchorPane
+        - pnlDashboard : BorderPane
+        - pnlEquipment : AnchorPane
+        - pnlHeader : AnchorPane
+        - pnlMainAnchorPane : AnchorPane
+        - pnlMainStack : StackPane
+        - pnlSettings : AnchorPane
+        - saturdayVbox : VBox
+        - serialNumberColumn : TableColumn<AVEquipment, String>
+        - sundayControl : LocalDate
+        - sundayVbox : VBox
+        - tblColList : ArrayList<TableColumn>
+        - thursdayVbox : VBox
+        - tuesdayVbox : VBox
+        - txtAnnouncement : TextArea
+        - txtRecentActivity : TextArea
+        - typeColumn : TableColumn<AVEquipment, String>
+        - vBoxCounter : int
+        - vboxManageReservation : VBox
+        - wednesdayVbox : VBox
+        + adminToolsInit()
+        + editEquipmentTableCell()
+        + handleAccountButtons()
+        + handleButton()
+        + handleExit()
+        + initEquipmentColumns()
+        + initialize()
+        + refreshEquipmentTable()
+        + removeEquipment()
+        + resetEverything()
+        + switchToCheckOut()
+        + switchToReservePane()
+        - applyThemeSetting()
+        - createBoxesFor()
+        - createReservationBox()
+        - displayAccountView()
+        - displayAddEquipment()
+        - getEquipmentList()
+        - getLastSunday()
+        - handleSpecialNav()
+        - initAccessSettings()
+        - initCalendarGrid()
+        - initCalendarLabels()
+        - initDashboard()
+        - initDateControls()
+        - initEquipmentTable()
+        - initImageIcons()
+        - initManagers()
+        - initNewSystemPrompt()
+        - initReservationStatusInfo()
+        - initSortChoiceBox()
+        - initThemeSettings()
+        - processAppearanceAction()
+        - processDefectReport()
+        - processMark()
+        - processSelectedReservation()
+        - processSort()
+        - resetCalendar()
+        - resetThemeSettings()
+        - switchToRefreshPage()
+        - switchToSignOut()
+        - updateAllGridLabels()
+        - updateAnnouncement()
+        - updateBulletinPane()
+        - updateCalendarReservations()
+        - updateEquipmentList()
+        - updateEquipmentListView()
+        - updateGridLabel()
+        - updateRecentActivity()
+        - viewSelectedEquipment()
+    }
+  }
+  
+
+  namespace avem.controllers {
+    class avem.controllers.EquipmentView {
+        {static} - MAX_ROW_LABELS : int
+        {static} - avEquipment : AVEquipment
+        {static} - btnCancel : Button
+        {static} - btnClear : Button
+        {static} - btnFill : Button
+        {static} - btnMainFunction : Button
+        {static} - defectReport : String
+        {static} - fillString : String[]
+        {static} - hbox : HBox
+        {static} - labels : ArrayList<Label>
+        {static} - labelsString : String[]
+        {static} - lblContent : Label
+        {static} - lblHeader : Label
+        {static} - mainGridPane : GridPane
+        {static} - mainVbox : VBox
+        {static} - scene : Scene
+        {static} - textFields : ArrayList<TextField>
+        {static} - txtDefectReport : TextArea
+        {static} - verifiedAdd : boolean
+        {static} - window : Stage
+        {static} + displayAdd()
+        {static} + displayEdit()
+        {static} + getDefectReport()
+        {static} + notFilled()
+        {static} + view()
+    }
+  }
+  
+
+  namespace avem.controllers {
+    class avem.controllers.Main {
+        - xOffset : double
+        - yOffset : double
+        {static} + main()
+        + quit()
+        + start()
+        - initDarkMode()
+    }
+  }
+  
+
+  namespace avem.controllers {
+    class avem.controllers.MultiSelectTableView {
+        - avSelectedItems : ObservableList<S>
+        - lastSelectedIndex : int
+        - preSelectedItems : HashSet<Integer>
+        - previousSelectedIndex : int
+        - selectedIndices : HashSet<Integer>
+        - selectedItems : AVEquipment[]
+        - update : boolean
+        + MultiSelectTableView()
+        + MultiSelectTableView()
+        + getSelectedHashItems()
+        + updateSelection()
+        # toggle()
+        - init()
+        - makeSelection()
+    }
+  }
+  
+
+  namespace avem.controllers {
+    class avem.controllers.RefreshPageController {
+        - btnContinue : Button
+        + switchToDashboard()
+    }
+  }
+  
+
+  namespace avem.controllers {
+    class avem.controllers.ReserveEquipment {
+        {static} + tblEquipmentView : MultiSelectTableView<AVEquipment>
+        {static} - TITLE : String
+        {static} - brandColumn : TableColumn<AVEquipment, String>
+        {static} - btnCancel : Button
+        {static} - btnConfirm : Button
+        {static} - equipmentId : TableColumn<AVEquipment, String>
+        {static} - equipmentManager : AVEquipmentManager
+        {static} - isAvailableColumn : TableColumn<AVEquipment, Boolean>
+        {static} - lblHeader : Label
+        {static} - locationColumn : TableColumn<AVEquipment, String>
+        {static} - mainHBox : HBox
+        {static} - mainVbox : VBox
+        {static} - nameColumn : TableColumn<AVEquipment, String>
+        {static} - notesColumn : TableColumn<AVEquipment, String>
+        {static} - scene : Scene
+        {static} - selectedEquipment : ObservableList<AVEquipment>
+        {static} - serialNumberColumn : TableColumn<AVEquipment, String>
+        {static} - typeColumn : TableColumn<AVEquipment, String>
+        {static} - window : Stage
+        {static} + getReservation()
+        {static} + initEquipmentColumns()
+        + initialize()
+        {static} + initializeView()
+        {static} + setPreSelectedEquipment()
+        {static} - buildView()
+        {static} - getEquipmentList()
+        {static} - initEquipmentManager()
+        {static} - initEquipmentTableView()
+        {static} - selectAllPreSelectedShit()
+        {static} - startTheParty()
+        {static} - updateEquipmentList()
+    }
+  }
+  
+
+  namespace avem.controllers {
+    class avem.controllers.ReserveViewController {
+        + btnBack : Button
+        + btnClear : Button
+        + btnExit : Button
+        + btnReserve : Button
+        + btnUploadLetter : Button
+        + btnVerifyEvent : Button
+        + btnViewEquipment : Button
+        + tblEquipmentVIew : TableView<AVEquipment>
+        ~ departmentContents : String[]
+        ~ templateContents : String[]
+        ~ timeContents : String[]
+        ~ venueContents : String[]
+        - brandColumn : TableColumn<AVEquipment, String>
+        - datePicker : DatePicker
+        - dateTimeFormatter : DateTimeFormatter
+        - departmentChoiceBox : ChoiceBox<String>
+        - endTimeChoiceBox : ChoiceBox<String>
+        - endTimeOfDay : ChoiceBox<String>
+        - equipmentBundle : HashMap<String, AVEquipment>
+        - imgBack : ImageView
+        - imgClearInputs : ImageView
+        - imgExit : ImageView
+        - imgUploadLetter : ImageView
+        - localTimeFormatter : DateTimeFormatter
+        - nameColumn : TableColumn<AVEquipment, String>
+        - notesColumn : TableColumn<AVEquipment, String>
+        - startTimeChoiceBox : ChoiceBox<String>
+        - startTimeOfDay : ChoiceBox<String>
+        - templateChoiceBox : ChoiceBox<String>
+        - timeFormatter : DateFormat
+        - toReserveEquipment : ObservableList<AVEquipment>
+        - txtActivity : TextField
+        - txtAnnouncement : TextArea
+        - txtApprovedBy : TextField
+        - txtAreaNotes : TextArea
+        - txtContactNumber : TextField
+        - txtContactPerson : TextField
+        - txtRecentActivity : TextArea
+        - typeColumn : TableColumn<AVEquipment, String>
+        - venueChoiceBox : ChoiceBox<String>
+        + goBack()
+        + handleButton()
+        + handleExit()
+        + initDatePickerFormat()
+        + initEquipmentColumns()
+        + initialize()
+        + verifyClearInputs()
+        + verifyEvent()
+        - addReservationToManager()
+        - allTimeInputsAreFilled()
+        - clearInputs()
+        - fillInputs()
+        - fillInputsWithTemplate()
+        - getEquipmentList()
+        - handleReservation()
+        - handleViewEquipment()
+        - hasOverlap()
+        - initBulletinPane()
+        - initChoiceBoxes()
+        - initImageIcons()
+        - initInputAction()
+        - initManagers()
+        - inputsAreEmpty()
+        - isClickConfirmed()
+        - makeEquipmentUnavailable()
+        - parseReservation()
+        - promptAnotherReservation()
+        - updateEquipmentList()
+        - updateRecentActivity()
+        - verifyAllInputsAreFilled()
+        - verifyExistingReservation()
+        - verifyInputTimeConflicts()
+        - verifyPastDate()
+        - verifyReservation()
+        - verifyReservationTimeConflicts()
+    }
+  }
+  
+
+  namespace avem.controllers {
+    class avem.controllers.SigningController {
+        - btnAbout : Button
+        - btnForgotPassword : Button
+        - btnQuit : Button
+        - btnSignIn : Button
+        - btnSignInAsGuest : Button
+        - btnSignUp : Button
+        - txtPassword : PasswordField
+        - txtUsername : TextField
+        + handleButton()
+        + handleExit()
+        + initialize()
+        - FillSuperAdminInfo()
+        - handleSignIn()
+        - switchToDashboard()
+    }
+  }
+  
+
+  namespace avem.controllers {
+    class avem.controllers.TableViewController {
+        - btnCancel : Button
+        - lblHeader : Label
+        - nameColumn : TableColumn<AVEquipment, String>
+        - serialNumberColumn : TableColumn<AVEquipment, String>
+        - tableView : TableView<AVEquipment>
+        - typeColumn : TableColumn<AVEquipment, String>
+        + getEquipmentList()
+        + initialize()
+        + switchToDashboard()
+    }
+  }
+  
+
+  avem.controllers.AccountsViewController .up.|> javafx.fxml.Initializable
+  avem.controllers.CheckInOutEquipment .up.|> javafx.fxml.Initializable
+  avem.controllers.CheckInOutPageController .up.|> javafx.fxml.Initializable
+  avem.controllers.CheckInOutPageController o-- avem.core.AVEquipmentManager : equipmentManager
+  avem.controllers.CheckInOutPageController o-- avem.core.AVReservationManager : reservationManager
+  avem.controllers.CheckInOutPageController o-- avem.core.AVReservation : selectedReservation
+  avem.controllers.DashboardController .up.|> javafx.fxml.Initializable
+  avem.controllers.DashboardController o-- avem.core.AVEquipmentManager : equipmentManager
+  avem.controllers.DashboardController o-- avem.core.AVReservationManager : reservationManager
+  avem.controllers.DashboardController o-- avem.core.AVReservation : selectedReservation
+  avem.controllers.Main -up-|> javafx.application.Application
+  avem.controllers.MultiSelectTableView -up-|> javafx.scene.control.TableView
+  avem.controllers.ReserveEquipment .up.|> javafx.fxml.Initializable
+  avem.controllers.ReserveViewController .up.|> javafx.fxml.Initializable
+  avem.controllers.ReserveViewController o-- avem.core.AVEquipmentManager : equipmentManager
+  avem.controllers.ReserveViewController o-- avem.core.AVEvent : event
+  avem.controllers.ReserveViewController o-- avem.core.AVReservation : reservation
+  avem.controllers.ReserveViewController o-- avem.core.AVReservationManager : reservationManager
+  avem.controllers.SigningController .up.|> javafx.fxml.Initializable
+  avem.controllers.SigningController o-- avem.basic.AVEMInfo : accountInfo
+  avem.controllers.TableViewController .up.|> javafx.fxml.Initializable
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml
