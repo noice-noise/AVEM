@@ -1,0 +1,37 @@
+@startuml
+'https://plantuml.com/object-diagram
+
+title Equipment Management \n
+
+object AVAccount01 {
+    + name = "Raul"
+    + type = "Staff"
+}
+
+object AVAccount02 {
+    + name = "Bernard"
+    + type = "Staff"
+}
+
+object AVEquipment01 {
+    + id = "235"
+    + status = "CHECKED_IN"
+}
+
+object AVEquipment02 {
+    + id = "234"
+    + status = "RESERVED"
+}
+
+object AVEquipmentManager {
+    + reservationEntries = 2
+}
+
+AVEquipment01 "updates" <--up AVEquipmentManager
+AVEquipment02 "updates" <--up AVEquipmentManager
+
+AVAccount01 --up> "edits" AVEquipment01
+'AVAccount01 --up> "updates" AVReservation02
+AVAccount02 --up> "adds" AVEquipment02
+
+@enduml

@@ -1,0 +1,37 @@
+@startuml
+'https://plantuml.com/object-diagram
+
+title Reserve Object Diagrams \n
+
+object AVAccount01 {
+    + name = "Raul"
+    + type = "Staff"
+}
+
+object AVAccount02 {
+    + name = "Bernard"
+    + type = "Staff"
+}
+
+object AVReservation01 {
+    + id = "235"
+    + status = "RESERVED"
+}
+
+object AVReservation02 {
+    + id = "234"
+    + status = "RESERVED"
+}
+
+object AVReservationManager {
+    + reservationEntries = 2
+}
+
+AVReservation01 "stores" <--up AVReservationManager
+AVReservation02 "stores" <--up AVReservationManager
+
+AVAccount01 --up> "reserves" AVReservation01
+AVAccount01 --up> "updates" AVReservation02
+AVAccount02 ---up> "reserves" AVReservation02
+
+@enduml

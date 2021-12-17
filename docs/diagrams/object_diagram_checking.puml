@@ -1,0 +1,37 @@
+@startuml
+'https://plantuml.com/object-diagram
+
+title Check In/Out Object Diagram \n
+
+object AVAccount01 {
+    + name = "Raul"
+    + type = "Staff"
+}
+
+object AVAccount02 {
+    + name = "Bernard"
+    + type = "Staff"
+}
+
+object AVReservation01 {
+    + id = "235"
+    + status = "CHECKED_IN"
+}
+
+object AVReservation02 {
+    + id = "234"
+    + status = "RESERVED"
+}
+
+object AVReservationManager {
+    + reservationEntries = 2
+}
+
+AVReservation01 "updates" <--up AVReservationManager
+AVReservation02 "updates" <--up AVReservationManager
+
+AVAccount01 --up> "checks in" AVReservation01
+'AVAccount01 --up> "updates" AVReservation02
+AVAccount02 --up> "checks out" AVReservation02
+
+@enduml

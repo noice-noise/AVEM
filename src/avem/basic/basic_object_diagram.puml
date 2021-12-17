@@ -1,17 +1,22 @@
 @startuml
 'https://plantuml.com/object-diagram
 
-object AVEvent {
-    - avID = "232"
-    - eventName = "Board of Directors Meeting"
-    - eventVenue = "Conference Room A"
-    - eventDepartment = "President's Office"
-    - eventStatus = "Ongoing"
-    - contactPerson = "Ms. Katherine Cheng"
-    - contactNumber = "104"
-    - approvedBy = "Executive Office"
-    - encodedBy = "Raul"
-    - additionalNotes = "None."
+title Reservation Object Diagram \n
+
+map AVEvent {
+    avID => "232"
+    eventName => "Board of Directors Meeting"
+    eventVenue => "Conference Room A"
+    eventDepartment => "President's Office"
+    eventStatus => "Ongoing"
+    contactPerson => "Ms. Katherine Cheng"
+    contactNumber => "104"
+    approvedBy => "Executive Office"
+    encodedBy => "Raul"
+    additionalNotes = "None."
+    avDate =>
+    startTime =>
+    endTime =>
 }
 
 object AVDate {
@@ -32,11 +37,17 @@ object AVTimeEnd {
     - timeOfDay = "AM"
 }
 
-object AVReservation {
-    - equipmentStatus = "CHECKED_OUT"
+map AVReservation {
+    equipmentStatus => "CHECKED_OUT"
+    eventList =>
+    equipmentList =>
 }
 
-
+map AVEquipmentBundle {
+    avEquipment1 =>
+    avEquipment2 =>
+    avEquipment3 =>
+}
 
 object AVEquipment01 {
     - brand = "Lenovo"
@@ -74,12 +85,23 @@ object AVEquipment03 {
     - type = "Projector"
 }
 
-AVEvent --up> AVReservation
-AVTimeStart --up-> AVEvent
-AVTimeEnd --up-> AVEvent
-AVDate -up-> AVEvent
+AVReservation::equipmentList *--> AVEquipmentBundle
+AVReservation::eventList *--> AVEvent
+AVEquipmentBundle::avEquipment1 o--> AVEquipment01
+AVEquipmentBundle::avEquipment2 o--> AVEquipment02
+AVEquipmentBundle::avEquipment3 o--> AVEquipment03
 
-AVEquipment01 ---up> AVReservation
-AVEquipment02 ---up> AVReservation
-AVEquipment03 ---up> AVReservation
+
+'AVEvent --up> AVReservation
+'AVTimeStart --up-> AVEvent
+'AVTimeEnd --up-> AVEvent
+'AVDate -up-> AVEvent
+
+'AVEquipment01 -up> AVReservation
+'AVEquipment02 -up> AVReservation
+'AVEquipment03 -up> AVReservation
+
+AVEvent::avDate *--> AVDate
+AVEvent::startTime *--> AVTimeStart
+AVEvent::endTime *--> AVTimeEnd
 @enduml

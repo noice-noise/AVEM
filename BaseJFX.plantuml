@@ -176,7 +176,7 @@ title __AVEMPROJECT's Class Diagram__\n
   }
   
 
-  avem.controllers.AccountsViewController .up.|> javafx.fxml.Initializable
+  avem.controllers.AccountsViewController ....up.|> javafx.fxml.Initializable
   avem.controllers.CheckInOutEquipment .up.|> javafx.fxml.Initializable
   avem.controllers.CheckInOutPageController .up.|> javafx.fxml.Initializable
   avem.controllers.CheckInOutPageController o-- avem.core.AVEquipmentManager : equipmentManager
@@ -186,7 +186,7 @@ title __AVEMPROJECT's Class Diagram__\n
   avem.controllers.DashboardController o-- avem.core.AVEquipmentManager : equipmentManager
   avem.controllers.DashboardController o-- avem.core.AVReservationManager : reservationManager
   avem.controllers.DashboardController o-- avem.core.AVReservation : selectedReservation
-  avem.controllers.Main -up-|> javafx.application.Application
+  avem.controllers.Main ---up-|> javafx.application.Application
   avem.controllers.MultiSelectTableView -up-|> javafx.scene.control.TableView
   avem.controllers.ReserveEquipment .up.|> javafx.fxml.Initializable
   avem.controllers.ReserveViewController .up.|> javafx.fxml.Initializable
@@ -199,7 +199,7 @@ title __AVEMPROJECT's Class Diagram__\n
   avem.controllers.TableViewController .up.|> javafx.fxml.Initializable
   avem.core.AVButton -up-|> javafx.scene.control.Button
   avem.core.AVButton o-- avem.core.AVReservation : reservation
-  avem.core.AVEvent o-- avem.core.AVDate : eventDate
+  avem.core.AVEvent o--- avem.core.AVDate : eventDate
   avem.core.AVEvent o-- avem.core.AVTime : eventEndTime
   avem.core.AVEvent o-- avem.core.AVTime : eventStartTime
   avem.core.AVReservation o-- avem.core.AVEvent : event
