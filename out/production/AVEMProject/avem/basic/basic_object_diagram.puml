@@ -1,0 +1,107 @@
+@startuml
+'https://plantuml.com/object-diagram
+
+title Reservation Object Diagram \n
+
+map AVEvent {
+    avID => "232"
+    eventName => "Board of Directors Meeting"
+    eventVenue => "Conference Room A"
+    eventDepartment => "President's Office"
+    eventStatus => "Ongoing"
+    contactPerson => "Ms. Katherine Cheng"
+    contactNumber => "104"
+    approvedBy => "Executive Office"
+    encodedBy => "Raul"
+    additionalNotes = "None."
+    avDate =>
+    startTime =>
+    endTime =>
+}
+
+object AVDate {
+    - day = "15"
+    - month = "12"
+    - year = "2021"
+}
+
+object AVTimeStart {
+    - hours = "8"
+    - minutes = "00"
+    - timeOfDay = "AM"
+}
+
+object AVTimeEnd {
+    - hours = "8"
+    - minutes = "00"
+    - timeOfDay = "AM"
+}
+
+map AVReservation {
+    equipmentStatus => "CHECKED_OUT"
+    eventList =>
+    equipmentList =>
+}
+
+map AVEquipmentBundle {
+    avEquipment1 =>
+    avEquipment2 =>
+    avEquipment3 =>
+}
+
+object AVEquipment01 {
+    - brand = "Lenovo"
+    - currentLocation = "Storage"
+    - equipmentID = "305"
+    - imgFilePath = "NA"
+    - isAvailable = true
+    - name = "Lenovo IDEAPAD"
+    - notes = "NA"
+    - serialNumber = "LN9827155"
+    - type = "Laptop"
+}
+
+object AVEquipment02 {
+    - brand = "Nikon"
+    - currentLocation = "Storage"
+    - equipmentID = "356"
+    - imgFilePath = "NONE"
+    - isAvailable = true
+    - name = "Nikon N2"
+    - notes = "None"
+    - serialNumber = "NK23922455"
+    - type = "Camera"
+}
+
+object AVEquipment03 {
+    - brand = "EPSON"
+    - currentLocation = "Storage"
+    - equipmentID = "422"
+    - imgFilePath = "NONE"
+    - isAvailable = true
+    - name = "EPSON Small"
+    - notes = "Bring bag."
+    - serialNumber = "EPS381757"
+    - type = "Projector"
+}
+
+AVReservation::equipmentList *--> AVEquipmentBundle
+AVReservation::eventList *--> AVEvent
+AVEquipmentBundle::avEquipment1 o--> AVEquipment01
+AVEquipmentBundle::avEquipment2 o--> AVEquipment02
+AVEquipmentBundle::avEquipment3 o--> AVEquipment03
+
+
+'AVEvent --up> AVReservation
+'AVTimeStart --up-> AVEvent
+'AVTimeEnd --up-> AVEvent
+'AVDate -up-> AVEvent
+
+'AVEquipment01 -up> AVReservation
+'AVEquipment02 -up> AVReservation
+'AVEquipment03 -up> AVReservation
+
+AVEvent::avDate *--> AVDate
+AVEvent::startTime *--> AVTimeStart
+AVEvent::endTime *--> AVTimeEnd
+@enduml

@@ -1,0 +1,377 @@
+@startuml
+
+title __CORE's Class Diagram__\n
+
+  namespace avem.core {
+    class avem.core.AVAccount {
+        {static} + ADMIN : int
+        {static} + EXTERNAL_STAFF : int
+        {static} + INTERNAL_STAFF : int
+        {static} + STUDENT_GUEST : int
+        - access : int
+        - additionalInfo : String
+        - name : String
+        - password : String
+        - username : String
+        + AVAccount()
+        + AVAccount()
+        + AVAccount()
+        + AVAccount()
+        + equals()
+        + getAccess()
+        + getAdditionalInfo()
+        + getFormattedString()
+        + getName()
+        + getPassword()
+        + getUsername()
+        + setAccess()
+        + setAdditionalInfo()
+        + setName()
+        + setPassword()
+        + setUsername()
+        + toString()
+    }
+  }
+  
+
+  namespace avem.core {
+    class avem.core.AVButton {
+        + AVButton()
+        + getReservation()
+        + setReservation()
+    }
+  }
+  
+
+  namespace avem.core {
+    class avem.core.AVDate {
+        - day : String
+        - month : String
+        - year : String
+        + AVDate()
+        + AVDate()
+        + equals()
+        + getCurrentYear()
+        + getDay()
+        + getMonth()
+        + getYear()
+        + setDay()
+        + setMonth()
+        + setYear()
+        + toString()
+        - hasOneOrTwoCharactersBeforeDelimiter()
+        - isBetweenEightAndTen()
+        - isValid()
+        - verifyDateData()
+    }
+  }
+  
+
+  namespace avem.core {
+    class avem.core.AVEquipment {
+        - brand : String
+        - currentLocation : String
+        - equipmentID : String
+        - imgFilePath : String
+        - isAvailable : boolean
+        - name : String
+        - notes : String
+        - serialNumber : String
+        - type : String
+        + AVEquipment()
+        + AVEquipment()
+        + appendNotes()
+        + equals()
+        + getBrand()
+        + getCurrentLocation()
+        + getEquipmentID()
+        + getFormattedString()
+        + getImgFilePath()
+        + getName()
+        + getNotes()
+        + getSerialNumber()
+        + getType()
+        + isAvailable()
+        + removeNewLines()
+        + setAvailable()
+        + setBrand()
+        + setCurrentLocation()
+        + setEquipmentID()
+        + setImgFilePath()
+        + setName()
+        + setNotes()
+        + setSerialNumber()
+        + setType()
+        + toString()
+        + trimContents()
+        - createEquipmentID()
+    }
+  }
+  
+
+  namespace avem.core {
+    class avem.core.AVEquipmentManager {
+        - equipmentArrayList : ArrayList<AVEquipment>
+        - equipmentEntries : HashMap<String, AVEquipment>
+        - equipmentManagerDIR : File
+        - equipmentManagerFile : File
+        - isTest : boolean
+        - sessionDone : boolean
+        + AVEquipmentManager()
+        + AVEquipmentManager()
+        + addEquipment()
+        + createDirectory()
+        + directoryExists()
+        + editEquipment()
+        + fileEmpty()
+        + fileExists()
+        + getAllEquipment()
+        + getDirectory()
+        + getEquipment()
+        + getEquipmentEntries()
+        + getFile()
+        + getFileContents()
+        + getFormattedEquipment()
+        + getSessionStatus()
+        + parseFileContents()
+        + removeEquipment()
+        + resetAllFilesAndDirectory()
+        + setEquipmentAvailable()
+        + setEquipmentNote()
+        + setEquipmentUnavailable()
+        + setSessionDone()
+        + updateEquipmentManager()
+        - createEquipmentArrayList()
+        - createEquipmentEntries()
+        - createFile()
+        - deleteFiles()
+        - initDirectoryWithPath()
+        - initialize()
+        - initializeForTest()
+        - parseCourseFrom()
+    }
+  }
+  
+
+  namespace avem.core {
+    class avem.core.AVEvent {
+        {static} + CANCELLED_STATUS : String
+        {static} + FINISHED_STATUS : String
+        {static} + ONGOING_STATUS : String
+        {static} + POSTPONED_STATUS : String
+        {static} + RESERVED_STATUS : String
+        - additionalNotes : String
+        - approvedBy : String
+        - avID : String
+        - contactNumber : String
+        - contactPerson : String
+        - encodedBy : String
+        - eventDepartment : String
+        - eventName : String
+        - eventStatus : String
+        - eventVenue : String
+        + AVEvent()
+        + AVEvent()
+        + AVEvent()
+        + equals()
+        + getAdditionalNotes()
+        + getApprovedBy()
+        + getContactNumber()
+        + getContactPerson()
+        + getEncodedBy()
+        + getEventDate()
+        + getEventDepartment()
+        + getEventEndTime()
+        + getEventName()
+        + getEventStartTime()
+        + getEventStatus()
+        + getEventVenue()
+        + getFormattedString()
+        + getID()
+        + isEqualDateTime()
+        + setAdditionalNotes()
+        + setApprovedBy()
+        + setContactNumber()
+        + setContactPerson()
+        + setEncodedBy()
+        + setEventDate()
+        + setEventDepartment()
+        + setEventEndTime()
+        + setEventName()
+        + setEventStartTime()
+        + setEventStatus()
+        + setEventVenue()
+        - verifyTime()
+    }
+  }
+  
+
+  namespace avem.core {
+    class avem.core.AVEventManager {
+        - eventArrayList : ArrayList<AVEvent>
+        - eventEntries : HashMap<String, AVEvent>
+        - eventManagerDIR : File
+        - eventManagerFile : File
+        - isTest : boolean
+        - sessionDone : boolean
+        + AVEventManager()
+        + AVEventManager()
+        + addEvent()
+        + createDirectory()
+        + directoryExists()
+        + displayConsoleCourseEntries()
+        + editEquipment()
+        + fileEmpty()
+        + fileExists()
+        + getAllEquipment()
+        + getDirectory()
+        + getEquipment()
+        + getFile()
+        + getFileContents()
+        + getFormattedEquipment()
+        + getSessionStatus()
+        + parseFileContents()
+        + removeEquipment()
+        + resetAllFilesAndDirectory()
+        + setSessionDone()
+        + updateEquipmentManagerFile()
+        - createEquipmentArrayList()
+        - createEquipmentEntries()
+        - createFile()
+        - deleteFiles()
+        - initDirectoryWithPath()
+        - initialize()
+        - initializeForTest()
+        - parseCourseFrom()
+    }
+  }
+  
+
+  namespace avem.core {
+    class avem.core.AVReservation {
+        {static} + CHECKED_IN : String
+        {static} + CHECKED_OUT : String
+        {static} + RESERVED : String
+        - equipmentBundle : HashMap<String, AVEquipment>
+        - equipmentStatus : String
+        + AVReservation()
+        + AVReservation()
+        + equals()
+        + getEquipmentBundle()
+        + getEquipmentStatus()
+        + getEvent()
+        + getFormattedString()
+        + getReservationID()
+        + setEquipmentBundle()
+        + setEquipmentStatus()
+        + setEvent()
+        + toString()
+        - getEquipmentBundleFormattedString()
+    }
+  }
+  
+
+  namespace avem.core {
+    class avem.core.AVReservationManager {
+        - dateTimeFormatter : DateTimeFormatter
+        - reservationEntries : HashMap<String, AVReservation>
+        - reservationManagerDIR : File
+        - reservationManagerFile : File
+        - sortedReservations : ArrayList<AVReservation>
+        - timeFormatter : DateFormat
+        + AVReservationManager()
+        + addReservation()
+        + checkConflicts()
+        + createDirectory()
+        + directoryExists()
+        + fileExists()
+        + getDirectory()
+        + getFile()
+        + getFileContents()
+        + getFormattedReservation()
+        + getReservation()
+        + getReservationRanging()
+        + getReservationsFor()
+        + getSortedReservations()
+        + getSortedReservationsFor()
+        + isAllEmpty()
+        + isEmptyFile()
+        + isEmptyReservations()
+        + parseFileContents()
+        + removeReservation()
+        + reservationSize()
+        + resetAllFilesAndDirectory()
+        + setCheckedIn()
+        + setCheckedOut()
+        + sortReservations()
+        + updateReservation()
+        + updateReservationManagerFile()
+        - addToSortedReservations()
+        - checkTimeConflict()
+        - createFile()
+        - createReservationEntries()
+        - createSortedReservations()
+        - deleteFiles()
+        - getAVDateValueOf()
+        - getNonDuplicateDateList()
+        - getReservationDates()
+        - initDirectoryWithPath()
+        - initialize()
+        - isFinished()
+        - isOngoing()
+        - parseEquipmentBundleFrom()
+        - parseEquipmentStatusFrom()
+        - parseEventFrom()
+        - parseReservationFrom()
+        - processFinished()
+        - processToday()
+        - removeDuplicateTime()
+        - sortByTime()
+        - sortDate()
+        - syncMomentReservationStatus()
+    }
+  }
+  
+
+  namespace avem.core {
+    class avem.core.AVTime {
+        - hours : String
+        - minutes : String
+        - timeOfDay : String
+        + AVTime()
+        + AVTime()
+        + equals()
+        + getData()
+        + getHours()
+        + getMinutes()
+        + getTimeOfDay()
+        + getTwentyFourHour()
+        + setHours()
+        + setMinutes()
+        + setTimeOfDay()
+        + toString()
+        - hasOneOrTwoCharactersBeforeDelimiter()
+        - hasOneOrTwoCharactersBeforeSpace()
+        - isBetweenFourToFiveCharacters()
+        - isValid()
+        - validTimeOfDayID()
+    }
+  }
+  
+
+  avem.core.AVButton -up-|> javafx.scene.control.Button
+  avem.core.AVButton o-- avem.core.AVReservation : reservation
+  avem.core.AVEvent o-- avem.core.AVDate : eventDate
+  avem.core.AVEvent o-- avem.core.AVTime : eventEndTime
+  avem.core.AVEvent o-- avem.core.AVTime : eventStartTime
+  avem.core.AVReservation o-- avem.core.AVEvent : event
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml
